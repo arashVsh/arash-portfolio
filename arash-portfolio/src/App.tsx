@@ -72,7 +72,7 @@ const profile = {
   github: "https://github.com/arashVsh",
   resumeUrl: "/resume.pdf",
   shortBio:
-    "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just write papers.",
+    "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just publish papers.",
 };
 
 const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "Contact"];
@@ -136,6 +136,8 @@ const projects: Project[] = [
   },
 ];
 
+
+
 const publications: Publication[] = [
   {
     title: "Recent Advances in Adversarial Attacks on Model Utility, Privacy, and Explainability: A Comprehensive Survey",
@@ -145,18 +147,21 @@ const publications: Publication[] = [
     link: "https://www.techrxiv.org/doi/full/10.36227/techrxiv.177272853.30003431/v1",
   },
   {
-    title: "IEEE publication on machine learning and healthcare",
-    venue: "Google Scholar record",
-    description: "Research work completed during undergraduate research at Isfahan University of Technology.",
-    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u-x6o8ySG0sC",
-  },
-  {
-    title: "IEEE publication on machine learning and healthcare",
+    title: "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model",
     venue: "Google Scholar record",
     description: "Research work completed during undergraduate research at Isfahan University of Technology.",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u5HHmVD_uO8C",
   },
+  {
+    title: "Atrial Fibrillation (AF) Detection Using Deep Learning with GAN-based Data Augmentation",
+    venue: "Google Scholar record",
+    description: "Research work completed during undergraduate research at Isfahan University of Technology.",
+    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u-x6o8ySG0sC",
+  },
+
 ];
+
+
 
 const experiences: Experience[] = [
   {
@@ -236,6 +241,7 @@ function LinkButton({ href, children, variant = "primary" }: LinkButtonProps) {
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,#cffafe,transparent_35%),linear-gradient(180deg,#f8fafc,#ffffff)] text-slate-900">
@@ -274,15 +280,21 @@ export default function App() {
         )}
       </header>
 
-      <section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-[1.05fr_0.95fr] md:py-28">
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-700">
-            <span className="h-2 w-2 rounded-full bg-cyan-500" />
-            Available for industry roles after Aug 2026
-          </div>
+<section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-10 md:grid-cols-[1.05fr_0.95fr] md:py-16">
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+<div className="mb-6 inline-flex flex-col gap-1 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm font-semibold text-cyan-700">
+  <div className="flex items-center gap-2">
+    <span className="h-2 w-2 rounded-full bg-cyan-500" />
+    Available for remote roles immediately
+  </div>
+
+  <div className="pl-4 text-cyan-600">
+    Open to relocation for onsite roles after Aug 2026
+  </div>
+</div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight text-slate-950 md:text-7xl">
-            I build AI and security tools that move from research ideas to working products.
+            Started with C++ at 15. Still hooked! ☕
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{profile.shortBio}</p>
@@ -311,8 +323,7 @@ export default function App() {
           className="relative"
         >
           <div className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-cyan-200 via-blue-100 to-white blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur">
-            <div className="rounded-[1.5rem] bg-slate-950 p-6 text-white">
+<div className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur md:-mt-24"><div className="rounded-[1.5rem] bg-slate-950 p-6 text-white">
               <img
                 src="/profile.jpg"
                 alt="Arash Vashagh"
@@ -342,8 +353,8 @@ export default function App() {
               </div>
 
               <div className="mt-5 text-sm leading-6 text-cyan-50">
-  Machine Learning • Cybersecurity • Software Engineering
-</div>
+                Machine Learning • Cybersecurity • Software Engineering
+              </div>
             </div>
           </div>
         </motion.div>
@@ -367,6 +378,7 @@ export default function App() {
           })}
         </div>
       </section>
+
 
       <section id="skills" className="bg-slate-950 px-5 py-20 text-white">
         <div className="mx-auto max-w-7xl">
@@ -449,6 +461,50 @@ export default function App() {
               </a>
             ))}
           </div>
+
+          <h3 className="mt-12 mb-5 text-2xl font-bold text-slate-950"></h3>
+
+          <h3 className="mb-5 text-2xl font-bold text-slate-950">
+            Ongoing Research & Engineering Work
+          </h3>
+
+          <div className="space-y-4">
+            {[
+              {
+                title:
+                  "Structured Prompt Consistency for Adversarial Image Detection with Frozen Vision-Language Models",
+                status: "Under review at NeurIPS 2026",
+              },
+              {
+                title:
+                  "A Survey on Defenses against Adversarial Attacks: Strategies and Limitations",
+                status: "Final review stage",
+              },
+              {
+                title:
+                  "GraphRectify: Transferring Adversarial Example Detectors Across Neural Networks",
+                status: "In development",
+              },
+              {
+                title:
+                  "Randomized Inference over Neuron Signatures for Robust Adversarial Detection",
+                status: "In development",
+              },
+            ].map((paper) => (
+              <div
+                key={paper.title}
+                className="rounded-2xl border border-slate-100 bg-white p-5 shadow-md shadow-slate-900/5"
+              >
+                <h4 className="text-lg font-bold text-slate-950">
+                  {paper.title}
+                </h4>
+
+                <p className="mt-2 text-sm font-medium text-cyan-700">
+                  {paper.status}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -487,12 +543,80 @@ export default function App() {
             </div>
             <div className="mt-8 rounded-2xl bg-gradient-to-br from-cyan-50 to-slate-50 p-5">
               <h4 className="font-bold text-slate-950">Education</h4>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                MSc Candidate in Computer Science, University of NB, expected August 2026. Focused on machine learning systems, adversarial robustness, and software implementation.
-              </p>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                BSc in Computer Engineering, Isfahan University of Technology, with a minor in Intelligent Systems.
-              </p>
+
+              <div className="mt-5 space-y-5">
+                <div className="flex gap-4 rounded-2xl bg-white/70 p-4">
+                  <img
+                    src="/logos/tsai-lab.png"
+                    alt="Trustworthy and Secure AI Lab logo"
+                    className="h-14 w-20 rounded-lg bg-white object-contain p-2"
+                  />
+
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-semibold text-slate-950">
+                        Trustworthy and Secure AI Lab
+                      </p>
+                      <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                        Oct 2025 - Aug 2026
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-sm leading-6 text-slate-600">
+                      Team Lead and LinkedIn page manager for lab communication,
+                      educational content, and graduate student coordination.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 rounded-2xl bg-white/70 p-4">
+                  <img
+                    src="/logos/unb-logo.jpg"
+                    alt="University of New Brunswick logo"
+                    className="h-14 w-20 rounded-lg bg-white object-contain p-2"
+                  />
+
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-semibold text-slate-950">
+                        University of New Brunswick
+                      </p>
+                      <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                        Sep 2024 - Aug 2026
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-sm leading-6 text-slate-600">
+                      MSc Candidate in Computer Science. Focused on machine learning systems,
+                      adversarial robustness, and software implementation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 rounded-2xl bg-white/70 p-4">
+                  <img
+                    src="/logos/iut-logo.png"
+                    alt="Isfahan University of Technology logo"
+                    className="h-14 w-20 rounded-lg bg-white object-contain p-2"
+                  />
+
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-semibold text-slate-950">
+                        Isfahan University of Technology
+                      </p>
+                      <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                        Sep 2019 - Feb 2024
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-sm leading-6 text-slate-600">
+                      BSc in Computer Engineering, with a minor in Intelligent Systems.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -503,7 +627,7 @@ export default function App() {
           <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Contact</p>
-              <h2 className="text-3xl font-black md:text-4xl">Looking for someone who is eager to grow and put his heart to work?</h2>
+              <h2 className="text-3xl font-black md:text-4xl">Looking for someone who learns fast, builds seriously, and cares about the work?</h2>
               <p className="mt-4 max-w-2xl leading-7 text-slate-300">
                 I am looking for machine learning engineering, software development, cybersecurity, and applied AI roles. I can relocate within Canada after my graduation in August 2026 and bring a mix of valuable research and hands-on experience.
               </p>
@@ -513,27 +637,35 @@ export default function App() {
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
               <button
-  type="button"
-  onClick={() => {
-    navigator.clipboard
-      .writeText(profile.email)
-      .then(() => {
-        alert(`Email copied: ${profile.email}`);
-      })
-      .catch(() => {
-        alert(`Please copy my email manually: ${profile.email}`);
-      });
-  }}
-  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-cyan-100"
->
-  Copy Email <Mail size={16} />
-</button>
+                type="button"
+                onClick={() => {
+                  navigator.clipboard
+                    .writeText(profile.email)
+                    .then(() => {
+                      setToastMessage(`Email copied: ${profile.email}`);
+                      setTimeout(() => setToastMessage(""), 2500);
+                    })
+                    .catch(() => {
+                      setToastMessage(`Please copy manually: ${profile.email}`);
+                      setTimeout(() => setToastMessage(""), 3500);
+                    });
+                }}
+                className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-cyan-100 hover:shadow-2xl hover:shadow-cyan-400/30 active:translate-y-0"
+              >
+                Copy Email <Mail size={16} className="transition-transform duration-200 group-hover:scale-110" />
+              </button>
               <LinkButton href={profile.linkedin} variant="secondary">LinkedIn <ExternalLink size={16} /></LinkButton>
               <LinkButton href={profile.github} variant="secondary">GitHub <ExternalLink size={16} /></LinkButton>
             </div>
           </div>
         </div>
       </section>
+
+      {toastMessage && (
+        <div className="fixed bottom-6 right-6 z-50 rounded-2xl bg-white px-5 py-4 text-sm font-semibold text-slate-950 shadow-2xl shadow-slate-900/20 border border-slate-100">
+          {toastMessage}
+        </div>
+      )}
     </main>
   );
 }
