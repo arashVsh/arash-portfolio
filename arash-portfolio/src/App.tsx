@@ -475,11 +475,11 @@ export default function App() {
                   "Structured Prompt Consistency for Adversarial Image Detection with Frozen Vision-Language Models",
                 status: "Under review at NeurIPS 2026",
               },
-              {
-                title:
-                  "A Survey on Defenses against Adversarial Attacks: Strategies and Limitations",
-                status: "Final review stage",
-              },
+              // {
+              //   title:
+              //     "A Survey on Defenses against Adversarial Attacks: Strategies and Limitations",
+              //   status: "Final review stage",
+              // },
               {
                 title:
                   "GraphRectify: Transferring Adversarial Example Detectors Across Neural Networks",
