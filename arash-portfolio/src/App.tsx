@@ -1,5 +1,7 @@
 import { useState, type ComponentType } from "react";
 import { motion } from "framer-motion";
+
+import { FaYoutube } from "react-icons/fa";
 import {
   Mail,
   MapPin,
@@ -71,11 +73,12 @@ const profile = {
   linkedin: "https://www.linkedin.com/in/arash-vashagh-23084923a/",
   github: "https://github.com/arashVsh",
   resumeUrl: "/resume.pdf",
+  googleScholar: "https://scholar.google.com/citations?user=yOVk_hcAAAAJ&hl=en",
   shortBio:
     "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just publish papers.",
 };
 
-const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "Contact"];
+const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "Educator", "Contact"];
 
 const skills: SkillGroup[] = [
   {
@@ -165,6 +168,16 @@ const publications: Publication[] = [
 
 const experiences: Experience[] = [
   {
+    role: "Voluntary Educator",
+    org: "AI Security and Adversarial Machine Learning Course",
+    date: "Jun 2026 - Present",
+    points: [
+      "Creating a Persian technical course on AI Security and Adversarial Machine Learning.",
+      "Developing slides, scripts, videos, and GitHub materials for learners facing language barriers.",
+    ],
+    link: "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
+  },
+  {
     role: "Team Lead",
     org: "Trustworthy and Secure AI (TSAI) Lab",
     date: "Oct 2025 - Present",
@@ -208,12 +221,31 @@ const certifications: string[] = [
   "AWS Certified Cloud Practitioner",
   "CompTIA Security+",
   "CompTIA Data+",
+  "CompTIA Project Management Essentials",
   "Microsoft AI-900",
   "Microsoft DP-900",
   "Microsoft AZ-900",
   "Microsoft SC-900",
-  "CompTIA Project Management Essentials",
+  "DeepLearning.AI - Agentic AI",
+  "ISC2 Certified in Cybersecurity (CC) - In Progress",
+  "CompTIA DataSys+ - Beta Results Pending",
 ];
+
+
+const educatorCourse = {
+  title: "AI Security and Adversarial Machine Learning Course",
+  subtitle: "Persian technical course for AI security learners",
+  description:
+    "I am creating a Persian technical course on AI Security and Adversarial Machine Learning to support Persian-speaking learners who face language barriers when studying advanced AI topics.",
+  details: [
+    "Developing slides, scripts, and course materials on machine learning foundations for adversarial machine learning.",
+    "Covering topics such as classification, loss functions, gradients, gradient descent, and later adversarial attacks and defenses.",
+    "Targeting completion of the Persian course by the end of June 2026, followed by an English version.",
+  ],
+  youtube:
+    "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
+  github: "https://github.com/arashVsh/AML_Course_Persian",
+};
 
 function SectionHeader({ eyebrow, title, description }: SectionHeaderProps) {
   return (
@@ -280,18 +312,18 @@ export default function App() {
         )}
       </header>
 
-<section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-10 md:grid-cols-[1.05fr_0.95fr] md:py-16">
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-<div className="mb-6 inline-flex flex-col gap-1 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm font-semibold text-cyan-700">
-  <div className="flex items-center gap-2">
-    <span className="h-2 w-2 rounded-full bg-cyan-500" />
-    Available for remote roles immediately
-  </div>
+      <section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-10 md:grid-cols-[1.05fr_0.95fr] md:py-16">
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <div className="mb-6 inline-flex flex-col gap-1 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm font-semibold text-cyan-700">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500" />
+              Available for remote roles immediately
+            </div>
 
-  <div className="pl-4 text-cyan-600">
-    Open to relocation for onsite roles after Aug 2026
-  </div>
-</div>
+            <div className="pl-4 text-cyan-600">
+              Open to relocation for onsite roles after Aug 2026
+            </div>
+          </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight text-slate-950 md:text-7xl">
             Started with C++ at 15. Still hooked! ☕
@@ -312,6 +344,14 @@ export default function App() {
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-600">
             <span className="inline-flex items-center gap-2"><MapPin size={16} /> {profile.location}</span>
             <a className="inline-flex items-center gap-2 hover:text-cyan-700" href={profile.linkedin} target="_blank" rel="noreferrer"><ExternalLink size={16} /> LinkedIn</a>
+            <a
+              className="inline-flex items-center gap-2 hover:text-cyan-700"
+              href={profile.googleScholar}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ExternalLink size={16} /> Google Scholar
+            </a>
             <a className="inline-flex items-center gap-2 hover:text-cyan-700" href={profile.github} target="_blank" rel="noreferrer"><ExternalLink size={16} /> GitHub</a>
           </div>
         </motion.div>
@@ -323,39 +363,39 @@ export default function App() {
           className="relative"
         >
           <div className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-cyan-200 via-blue-100 to-white blur-2xl" />
-<div className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur md:-mt-24"><div className="rounded-[1.5rem] bg-slate-950 p-6 text-white">
-              <img
-                src="/profile.jpg"
-                alt="Arash Vashagh"
-                className="mb-6 h-32 w-32 rounded-full border-4 border-cyan-300 object-cover shadow-xl"
-              />
+          <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur md:-mt-24"><div className="rounded-[1.5rem] bg-slate-950 p-6 text-white">
+            <img
+              src="/profile.jpg"
+              alt="Arash Vashagh"
+              className="mb-6 h-32 w-32 rounded-full border-4 border-cyan-300 object-cover shadow-xl"
+            />
 
-              <div className="mb-8 flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-cyan-300">Portfolio Snapshot</p>
-                  <h3 className="mt-1 text-2xl font-bold">{profile.name}</h3>
-                </div>
-                <BrainCircuit className="text-cyan-300" size={34} />
+            <div className="mb-8 flex items-center justify-between">
+              <div>
+                <p className="text-sm text-cyan-300">Portfolio Snapshot</p>
+                <h3 className="mt-1 text-2xl font-bold">{profile.name}</h3>
               </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  ["Focus", "Adversarial ML"],
-                  ["Degree", "MSc CS"],
-                  ["Teaching", "500+ students"],
-                  ["Certifications", "9+"],
-                ].map(([label, value]) => (
-                  <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-xs uppercase tracking-widest text-slate-400">{label}</p>
-                    <p className="mt-2 text-lg font-semibold">{value}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-5 text-sm leading-6 text-cyan-50">
-                Machine Learning • Cybersecurity • Software Engineering
-              </div>
+              <BrainCircuit className="text-cyan-300" size={34} />
             </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                ["Focus", "Adversarial ML"],
+                ["Degree", "MSc CS"],
+                ["Teaching", "500+ students"],
+                ["Certifications", "12+"],
+              ].map(([label, value]) => (
+                <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-widest text-slate-400">{label}</p>
+                  <p className="mt-2 text-lg font-semibold">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-5 text-sm leading-6 text-cyan-50">
+              Machine Learning • Cybersecurity • Software Engineering
+            </div>
+          </div>
           </div>
         </motion.div>
       </section>
@@ -364,7 +404,11 @@ export default function App() {
         <div className="grid gap-6 md:grid-cols-3">
           {[
             { icon: GraduationCap, title: "Graduate Researcher", text: "MSc candidate at UNB researching adversarial machine learning and robust AI systems." },
-            { icon: Users, title: "Educator & Team Lead", text: "Teaching assistant, lab team lead, and manager of educational content for the TSAI Lab." },
+            {
+              icon: Users,
+              title: "Educator & Team Lead",
+              text: "Teaching assistant, lab team lead, and creator of a Persian AI Security course for learners facing language barriers.",
+            },
             { icon: BriefcaseBusiness, title: "Industry-Oriented Builder", text: "Focused on practical ML, software engineering, APIs, mobile apps, cloud tools, and security systems." },
           ].map((card) => {
             const Icon = card.icon;
@@ -433,7 +477,6 @@ export default function App() {
                   {project.github && <LinkButton href={project.github} variant="secondary"><ExternalLink size={16} /> GitHub</LinkButton>}
                   {project.paper && <LinkButton href={project.paper} variant="secondary"><BookOpen size={16} /> Paper</LinkButton>}
                 </div>
-                <p className="mt-5 text-xs leading-5 text-slate-400">{project.imageDescription}</p>
               </div>
             </article>
           ))}
@@ -526,7 +569,16 @@ export default function App() {
                     <li key={point} className="flex gap-3 leading-7"><span className="mt-3 h-1.5 w-1.5 rounded-full bg-cyan-500" />{point}</li>
                   ))}
                 </ul>
-                {exp.link && <a href={exp.link} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700">Visit TSAI Lab <ExternalLink size={15} /></a>}
+                {exp.link && (
+                  <a
+                    href={exp.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700"
+                  >
+                    View Link <ExternalLink size={15} />
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -615,6 +667,79 @@ export default function App() {
                     </p>
                   </div>
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="educator" className="bg-slate-50 px-5 py-20">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="Voluntary Educator"
+            title="Making AI Security more accessible"
+            description="A Persian technical course designed to help learners understand AI Security and Adversarial Machine Learning from the foundations."
+          />
+
+          <div className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5">
+            <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 p-8 text-white md:p-10">
+                <div className="mb-6 inline-flex rounded-2xl bg-white/10 p-4 text-cyan-200">
+                  <BookOpen size={34} />
+                </div>
+
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200">
+                  AI Security Course
+                </p>
+
+                <h3 className="mt-4 text-3xl font-black leading-tight">
+                  {educatorCourse.title}
+                </h3>
+
+                <p className="mt-4 text-lg text-cyan-100">
+                  {educatorCourse.subtitle}
+                </p>
+
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p className="text-xs uppercase tracking-widest text-slate-300">
+                      Language
+                    </p>
+                    <p className="mt-2 text-lg font-semibold">Persian</p>
+                  </div>
+
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p className="text-xs uppercase tracking-widest text-slate-300">
+                      English Version
+                    </p>
+                    <p className="mt-2 text-lg font-semibold">Planned</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8 md:p-10">
+                <p className="text-lg leading-8 text-slate-600">
+                  {educatorCourse.description}
+                </p>
+
+                <ul className="mt-6 space-y-3 text-slate-600">
+                  {educatorCourse.details.map((item) => (
+                    <li key={item} className="flex gap-3 leading-7">
+                      <span className="mt-3 h-1.5 w-1.5 rounded-full bg-cyan-500" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <LinkButton href={educatorCourse.youtube}>
+                    <FaYoutube size={16} /> Watch Playlist
+                  </LinkButton>
+
+                  <LinkButton href={educatorCourse.github} variant="secondary">
+                    <ExternalLink size={16} /> Course Materials
+                  </LinkButton>
                 </div>
               </div>
             </div>
