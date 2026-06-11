@@ -105,6 +105,20 @@ const skills: SkillGroup[] = [
 
 const projects: Project[] = [
   {
+    title: "PaperWise AI",
+    subtitle: "Research Paper RAG / LLMOps Assistant",
+    description:
+      "A public web app that helps users upload research papers, ask citation-grounded questions, compare papers, and export answers as PDF notes.",
+    impact:
+      "Implemented PDF ingestion, text extraction, TF-IDF retrieval, OpenAI API integration, offline fallback, suggested questions, and retrieval metrics.",
+    tech: ["Python", "Streamlit", "Scikit-learn", "OpenAI API", "pypdf", "ReportLab"],
+    github: "https://github.com/arashVsh/research-paper-ragops",
+    paper: "https://paperwise-ai.streamlit.app/",
+    imageDescription:
+      "Suggested image: a research assistant interface with PDF upload, question answering, citations, and export button.",
+  },
+
+  {
     title: "PromptShield",
     subtitle: "Adversarial Detection for Vision-Language Models",
     description:
@@ -475,7 +489,11 @@ export default function App() {
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {project.github && <LinkButton href={project.github} variant="secondary"><ExternalLink size={16} /> GitHub</LinkButton>}
-                  {project.paper && <LinkButton href={project.paper} variant="secondary"><BookOpen size={16} /> Paper</LinkButton>}
+                  {project.paper && (
+                    <LinkButton href={project.paper} variant="secondary">
+                      <BookOpen size={16} /> {project.title === "PaperWise AI" ? "Live App" : "Paper"}
+                    </LinkButton>
+                  )}
                 </div>
               </div>
             </article>
