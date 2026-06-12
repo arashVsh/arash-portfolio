@@ -233,16 +233,16 @@ const experiences: Experience[] = [
 const certifications: string[] = [
   "AWS Certified AI Practitioner",
   "AWS Certified Cloud Practitioner",
+  "Microsoft AI-900",
+  "Microsoft AZ-900",
+  "Microsoft SC-900",
+  "Microsoft DP-900",
+  "DeepLearning.AI - Agentic AI",
   "CompTIA Security+",
   "CompTIA Data+",
   "CompTIA Project Management Essentials",
-  "Microsoft AI-900",
-  "Microsoft DP-900",
-  "Microsoft AZ-900",
-  "Microsoft SC-900",
-  "DeepLearning.AI - Agentic AI",
-  "ISC2 Certified in Cybersecurity (CC) - In Progress",
-  "CompTIA DataSys+ - Beta Results Pending",
+  "Google Cloud Digital Leader - Planned",
+  "CompTIA DataSys+ - Results Pending",
 ];
 
 
