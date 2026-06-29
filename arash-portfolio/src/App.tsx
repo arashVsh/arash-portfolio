@@ -51,6 +51,10 @@ type Experience = {
   date: string;
   points: string[];
   link?: string;
+  links?: {
+    label: string;
+    url: string;
+  }[];
 };
 
 type SectionHeaderProps = {
@@ -260,12 +264,22 @@ const experiences: Experience[] = [
     org: "University of New Brunswick & Trustworthy and Secure AI Lab",
     date: "Sep 2024 - Present",
     points: [
-      "Conduct MSc research in adversarial machine learning, robustness, attack detection, and trustworthy AI systems.",
-      "Co-authored survey work on adversarial attacks across machine learning, privacy, utility, and explainability.",
-      "Propose and implement adversarial defense mechanisms and applied ML security experiments.",
-      "Coordinate graduate student work and manage TSAI Lab communication and educational content.",
+      "Conduct MSc thesis research in adversarial machine learning, focusing on attacks, detection, robustness, and trustworthy AI.",
+      "Co-authored a survey on adversarial attacks and another survey on adversarial defense mechanisms.",
+      "Proposed and implemented adversarial detection mechanisms currently under internal faculty review.",
+      "Develop an adversarial attack on multimodal fusion models, with manuscript in progress.",
+      "Coordinate graduate student work and manage TSAI Lab updates and educational content.",
     ],
-    link: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
+    links: [
+      {
+        label: "Adversarial Attacks Survey",
+        url: "https://www.techrxiv.org/doi/full/10.36227/techrxiv.177272853.30003431/v1",
+      },
+      {
+        label: "TSAI Lab LinkedIn",
+        url: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
+      },
+    ],
   },
   {
     role: "Graduate Teaching Assistant",
@@ -274,6 +288,7 @@ const experiences: Experience[] = [
     points: [
       "Supported Software Engineering, Data Communication and Network Modeling, and Data Science for Big Data Analytics courses.",
       "Helped students with Java, Python, programming concepts, debugging, and technical problem solving.",
+      "Courses: Software Engineering, Data Communication and Network Modeling, and Data Science for Big Data Analytics.",
     ],
   },
   {
@@ -284,14 +299,34 @@ const experiences: Experience[] = [
       "Reviewed manuscripts and provided structured technical feedback for international conferences.",
       "Evaluated research quality, clarity, methodology, and technical contribution.",
     ],
+    links: [
+      {
+        label: "ArtInHCI 2024 Certificate",
+        url: "https://drive.google.com/file/d/18Jl1Mu6-fi-272sEjHUOpTdb3qWVf0DJ/view?usp=drive_link",
+      },
+      {
+        label: "BIBE 2024 Certificate",
+        url: "https://drive.google.com/file/d/1qcew0MJE69DjEmTelrJihG1ffeAVpHj7/view?usp=drive_link",
+      },
+    ],
   },
   {
     role: "Research Assistant",
     org: "Isfahan University of Technology",
     date: "Feb 2021 - Feb 2024",
     points: [
-      "Conducted machine learning and healthcare research resulting in IEEE publications.",
-      "Worked on model design, data preprocessing, experimental evaluation, and technical writing.",
+      "Conducted machine learning and healthcare research resulting in two IEEE publications.",
+      "Worked on model design, data preprocessing, experimental evaluation, paper writing, and conference presentation.",
+    ],
+    links: [
+      {
+        label: "IEEE Publication 1",
+        url: "https://ieeexplore.ieee.org/abstract/document/10326310",
+      },
+      {
+        label: "IEEE Publication 2",
+        url: "https://ieeexplore.ieee.org/abstract/document/10334666",
+      },
     ],
   },
   {
@@ -311,7 +346,12 @@ const experiences: Experience[] = [
       "Create Persian technical course materials on AI security and adversarial machine learning.",
       "Develop slides, scripts, videos, and GitHub materials for Persian-speaking learners facing language barriers.",
     ],
-    link: "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
+    links: [
+      {
+        label: "YouTube Playlist",
+        url: "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
+      },
+    ],
   },
 ];
 
@@ -416,11 +456,11 @@ export default function App() {
           <div className="mb-6 inline-flex flex-col gap-1 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm font-semibold text-cyan-700">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-cyan-500" />
-              Available for remote roles immediately
+              Available for full-time roles immediately
             </div>
 
             <div className="pl-4 text-cyan-600">
-              Open to relocation for onsite roles after Aug 2026
+              Open to relocation across Canada
             </div>
           </div>
 
@@ -681,6 +721,22 @@ export default function App() {
                   >
                     View Link <ExternalLink size={15} />
                   </a>
+                )}
+
+                {exp.links && exp.links.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {exp.links.map((item) => (
+                      <a
+                        key={item.url}
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-700"
+                      >
+                        {item.label} <ExternalLink size={15} />
+                      </a>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
