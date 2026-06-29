@@ -72,7 +72,7 @@ const profile = {
   email: "arash.vashagh@gmail.com",
   linkedin: "https://www.linkedin.com/in/arash-vashagh-23084923a/",
   github: "https://github.com/arashVsh",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Arash Vashagh - Resume.pdf",
   googleScholar: "https://scholar.google.com/citations?user=yOVk_hcAAAAJ&hl=en",
   shortBio:
     "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just publish papers.",
@@ -82,28 +82,91 @@ const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "
 
 const skills: SkillGroup[] = [
   {
-    title: "Machine Learning",
+    title: "Machine Learning & Deep RL",
     icon: BrainCircuit,
-    items: ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCLIP", "Feature engineering", "Model evaluation"],
+    items: [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "NumPy",
+      "Stable-Baselines3",
+      "Gymnasium",
+      "Deep Reinforcement Learning",
+    ],
+  },
+  {
+    title: "AI Security",
+    icon: ShieldCheck,
+    items: [
+      "Adversarial Machine Learning",
+      "Evasion attacks",
+      "Poisoning attacks",
+      "Privacy attacks",
+      "Explainability attacks",
+      "Robustness evaluation",
+      "Adversarial detection",
+      "Phishing detection",
+    ],
   },
   {
     title: "Software Development",
     icon: Code2,
-    items: ["Python", "Java", "JavaFX", "Kotlin", "C++", "SQL", "REST APIs", "JSON"],
+    items: [
+      "Python",
+      "Java",
+      "JavaFX",
+      "Kotlin",
+      "C++",
+      "SQL",
+      "REST APIs",
+      "JSON",
+      "PIL",
+
+    ],
   },
   {
-    title: "Cybersecurity",
-    icon: ShieldCheck,
-    items: ["Phishing detection", "Network analysis", "Wireshark", "Security+"],
-  },
-  {
-    title: "Cloud & Tools",
+    title: "Cloud, Apps & Tools",
     icon: Cloud,
-    items: ["AWS", "Microsoft Azure", "Docker", "Git", "FastAPI", "Flask", "Jupyter"],
+    items: [
+      "Streamlit",
+      "Streamlit Community Cloud",
+      "FastAPI",
+      "Flask",
+      "AWS",
+      "Microsoft Azure",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Jupyter",
+      "Wireshark",
+    ],
   },
 ];
 
 const projects: Project[] = [
+  {
+    title: "EvasionRL",
+    subtitle: "Real-Time Evasion Attacks on Reinforcement Learning Agents",
+    description:
+      "A deployed Streamlit app that demonstrates test-time evasion attacks against a trained DQN-controlled MountainCar agent by perturbing the robot's observations.",
+    impact:
+      "Built a full DRL security demo with clean-vs-attacked rollouts, FGSM/PGD/random observation attacks, custom cloud-safe visualization, browser-side playback, and final attack summaries for user interpretation.",
+    tech: [
+      "Python",
+      "PyTorch",
+      "Stable-Baselines3",
+      "Gymnasium",
+      "Streamlit",
+      "NumPy",
+      "PIL",
+      "Adversarial ML",
+      "Deep Reinforcement Learning",
+    ],
+    github: "https://github.com/arashVsh/EvasionRL",
+    paper: "https://arashvsh-evasionrl-app-najahp.streamlit.app/",
+    imageDescription:
+      "Suggested image: two side-by-side MountainCar agents, one clean and one under adversarial observation attack, with a playback panel and final robustness summary.",
+  },
   {
     title: "PaperWise AI",
     subtitle: "Research Paper RAG / LLMOps Assistant",
@@ -182,41 +245,33 @@ const publications: Publication[] = [
 
 const experiences: Experience[] = [
   {
-    role: "Voluntary Educator",
-    org: "AI Security and Adversarial Machine Learning Course",
-    date: "Jun 2026 - Present",
-    points: [
-      "Creating a Persian technical course on AI Security and Adversarial Machine Learning.",
-      "Developing slides, scripts, videos, and GitHub materials for learners facing language barriers.",
-    ],
-    link: "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
-  },
-  {
-    role: "Team Lead",
-    org: "Trustworthy and Secure AI (TSAI) Lab",
-    date: "Oct 2025 - Present",
-    points: [
-      "Coordinate graduate student work and lab operations.",
-      "Manage the TSAI LinkedIn page for educational content and lab communication.",
-    ],
-    link: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
-  },
-  {
-    role: "Graduate Research Assistant",
-    org: "University of New Brunswick",
+    role: "Graduate Research Assistant / Team Lead",
+    org: "University of New Brunswick & Trustworthy and Secure AI Lab",
     date: "Sep 2024 - Present",
     points: [
-      "Conduct MSc research in adversarial machine learning, robustness, and attack detection.",
-      "Co-authored a survey on adversarial attacks across model utility, privacy, and explainability.",
+      "Conduct MSc research in adversarial machine learning, robustness, attack detection, and trustworthy AI systems.",
+      "Co-authored survey work on adversarial attacks across machine learning, privacy, utility, and explainability.",
+      "Propose and implement adversarial defense mechanisms and applied ML security experiments.",
+      "Coordinate graduate student work and manage TSAI Lab communication and educational content.",
     ],
+    link: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
   },
   {
     role: "Graduate Teaching Assistant",
     org: "University of New Brunswick",
     date: "Jan 2025 - Apr 2026",
     points: [
-      "Served in Software Engineering, Data Communication and Network Modeling, and Big Data Analytics courses.",
-      "Helped students with Java, Python, programming concepts, and technical problem solving.",
+      "Supported Software Engineering, Data Communication and Network Modeling, and Data Science for Big Data Analytics courses.",
+      "Helped students with Java, Python, programming concepts, debugging, and technical problem solving.",
+    ],
+  },
+  {
+    role: "Conference Reviewer",
+    org: "ArtInHCI 2024 and BIBE 2024",
+    date: "Jul 2024 - Oct 2024",
+    points: [
+      "Reviewed manuscripts and provided structured technical feedback for international conferences.",
+      "Evaluated research quality, clarity, methodology, and technical contribution.",
     ],
   },
   {
@@ -225,8 +280,27 @@ const experiences: Experience[] = [
     date: "Feb 2021 - Feb 2024",
     points: [
       "Conducted machine learning and healthcare research resulting in IEEE publications.",
-      "Worked on model design, preprocessing, experimental evaluation, and technical writing.",
+      "Worked on model design, data preprocessing, experimental evaluation, and technical writing.",
     ],
+  },
+  {
+    role: "Teaching Assistant",
+    org: "Isfahan University of Technology",
+    date: "Feb 2021 - Feb 2024",
+    points: [
+      "Supported Artificial Intelligence, Embedded Systems, Data Structures, and programming labs.",
+      "Gave tutorials and graded assignments in C++, Java, and Python courses.",
+    ],
+  },
+  {
+    role: "Voluntary Educator",
+    org: "AI Security and Adversarial Machine Learning Course",
+    date: "Jun 2026 - Present",
+    points: [
+      "Create Persian technical course materials on AI security and adversarial machine learning.",
+      "Develop slides, scripts, videos, and GitHub materials for Persian-speaking learners facing language barriers.",
+    ],
+    link: "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
   },
 ];
 
@@ -241,7 +315,7 @@ const certifications: string[] = [
   "CompTIA Security+",
   "CompTIA Data+",
   "CompTIA Project Management Essentials",
-  "Google Cloud Digital Leader - Planned",
+  "Google Cloud Digital Leader - Results Pending",
   "CompTIA DataSys+ - Results Pending",
 ];
 
@@ -491,7 +565,7 @@ export default function App() {
                   {project.github && <LinkButton href={project.github} variant="secondary"><ExternalLink size={16} /> GitHub</LinkButton>}
                   {project.paper && (
                     <LinkButton href={project.paper} variant="secondary">
-                      <BookOpen size={16} /> {project.title === "PaperWise AI" ? "Live App" : "Paper"}
+                      <BookOpen size={16} /> {project.paper?.includes("streamlit.app") ? "Live App" : "Paper"}
                     </LinkButton>
                   )}
                 </div>
