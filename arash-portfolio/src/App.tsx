@@ -772,7 +772,7 @@ export default function App() {
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="font-semibold text-slate-950">
-                        Trustworthy and Secure AI Lab
+                        Trustworthy and Secure AI (TSAI) Lab
                       </p>
                       <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
                         Oct 2025 - Aug 2026
@@ -796,7 +796,7 @@ export default function App() {
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="font-semibold text-slate-950">
-                        University of New Brunswick
+                        University of New Brunswick (UNB)
                       </p>
                       <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
                         Sep 2024 - Aug 2026
@@ -820,7 +820,7 @@ export default function App() {
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="font-semibold text-slate-950">
-                        Isfahan University of Technology
+                        Isfahan University of Technology (IUT)
                       </p>
                       <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
                         Sep 2019 - Feb 2024
