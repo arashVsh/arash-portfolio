@@ -386,7 +386,6 @@ const educatorCourse = {
   details: [
     "Developing slides, scripts, and course materials on machine learning foundations for adversarial machine learning.",
     "Covering topics such as classification, loss functions, gradients, gradient descent, and later adversarial attacks and defenses.",
-    "Targeting completion of the Persian course by the end of June 2026, followed by an English version.",
   ],
   youtube:
     "https://youtube.com/playlist?list=PLYxTF848CZLmN1wPNhX5gKc4g4DSRafZE&si=mGru-L7j3YX1JNZC",
