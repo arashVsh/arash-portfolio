@@ -86,19 +86,16 @@ const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "
 
 const skills: SkillGroup[] = [
   {
-    title: "Machine Learning & AI",
+    title: "Machine Learning & Agentic AI",
     icon: BrainCircuit,
     items: [
       "PyTorch",
-      "TensorFlow",
       "Scikit-learn",
-      "NumPy",
-      "Reinforcement Learning",
-      "Stable-Baselines3",
-      "Gymnasium",
       "NLP",
       "RAG/LLMOps",
-      "Agentic Design",
+      "Agentic AI",
+      "Reinforcement Learning",
+      "OpenAI API",
     ],
   },
   {
@@ -106,14 +103,11 @@ const skills: SkillGroup[] = [
     icon: ShieldCheck,
     items: [
       "Adversarial Machine Learning",
-      "Adversarial Attacks",
-      "Adversarial Detection",
       "Evasion Attacks",
-      "Poisoning Attacks",
-      "Privacy Attacks",
-      "Explainability Attacks",
+      "Adversarial Detection",
       "Robustness Evaluation",
       "Phishing Detection",
+      "Trustworthy AI",
     ],
   },
   {
@@ -122,16 +116,14 @@ const skills: SkillGroup[] = [
     items: [
       "Python",
       "Java",
-      "JavaFX",
       "Kotlin",
       "C++",
-      "SQL",
       "JavaScript",
       "React",
-      "HTML",
-      "CSS",
+      "FastAPI",
+      "Flask",
       "REST APIs",
-      "JSON",
+      "SQL/SQLite",
     ],
   },
   {
@@ -139,26 +131,41 @@ const skills: SkillGroup[] = [
     icon: Cloud,
     items: [
       "Streamlit",
-      "Streamlit Community Cloud",
-      "FastAPI",
-      "Flask",
       "AWS",
       "Microsoft Azure",
       "Google Cloud",
       "Docker",
-      "Git",
-      "GitHub",
+      "Git/GitHub",
       "Jupyter",
-      "VS Code",
-      "IntelliJ IDEA",
-      "Wireshark",
-      "PIL",
       "MLflow",
     ],
   },
 ];
 
 const projects: Project[] = [
+
+  {
+    title: "JobPilot AI",
+    subtitle: "Agentic Job Search and Application Assistant",
+    description:
+      "An agentic job-search assistant, currently under development, that helps users upload a resume, select target industries and locations, discover relevant job postings, track applications, and draft personalized outreach emails.",
+    impact:
+      "Built a multi-agent workflow with job discovery, resume-based fit scoring, location and salary filtering, rejected-job debugging, persistent SQLite tracking, follow-up reminders, agent activity logs, application reports, and company-specific email drafting.",
+    tech: [
+      "Python",
+      "Streamlit",
+      "SQLite",
+      "OpenAI API",
+      "SerpAPI",
+      "Tavily API",
+      "Pandas",
+      "Agentic AI",
+      "RAG",
+    ],
+    github: "https://github.com/arashVsh/jobpilot_ai_mvp",
+    imageDescription:
+      "Suggested image: an agentic job-search dashboard showing resume upload, job filters, matched job cards, fit scores, rejected-job debug logs, and an email draft panel.",
+  },
   {
     title: "EvasionRL",
     subtitle: "Real-Time Evasion Attacks on Reinforcement Learning Agents",
