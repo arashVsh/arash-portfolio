@@ -236,6 +236,27 @@ const projects: Project[] = [
     imageDescription:
       "Suggested image: a mobile app screenshot mockup showing a URL input field, risk score, and safety recommendation.",
   },
+
+  {
+    title: "Atrial Fibrillation (AF) Detection with Diffusion-Based Data Augmentation",
+    subtitle: "Medical AI for ECG-Based AF Detection",
+    description:
+      "A medical AI research project for atrial fibrillation detection using cardiac signal preprocessing, 2D Poincaré image representations, and diffusion-model-based data augmentation.",
+    impact:
+      "Extracted R-R interval features from ECG-derived data, transformed 1D cardiac signals into 2D Poincaré images, generated augmented samples with a diffusion model, and trained CNN classifiers for AF detection. Published as an IEEE conference paper.",
+    tech: [
+      "Python",
+      "PyTorch",
+      "NumPy",
+      "MATLAB",
+      "Biomedical Signal Processing",
+      "Medical AI",
+    ],
+    github: "https://github.com/arashVsh/AF-Detection-DDPM",
+    paper: "https://ieeexplore.ieee.org/abstract/document/10326310",
+    imageDescription:
+      "Suggested image: an ECG signal transformed into a 2D Poincaré plot, followed by diffusion-based data augmentation and a CNN classifier for atrial fibrillation detection.",
+  },
 ];
 
 
