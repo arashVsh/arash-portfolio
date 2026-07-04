@@ -238,7 +238,7 @@ const projects: Project[] = [
   },
 
   {
-    title: "Atrial Fibrillation (AF) Detection with Diffusion-Based Data Augmentation",
+    title: "Atrial Fibrillation (AF) Detection with Data Augmentation",
     subtitle: "Medical AI for ECG-Based AF Detection",
     description:
       "A medical AI research project for atrial fibrillation detection using cardiac signal preprocessing, 2D Poincaré image representations, and diffusion-model-based data augmentation.",
