@@ -96,6 +96,8 @@ const skills: SkillGroup[] = [
       "Agentic AI",
       "Reinforcement Learning",
       "OpenAI API",
+      "Signal Processing",
+      "Biomedical Research",
     ],
   },
   {
@@ -146,7 +148,7 @@ const projects: Project[] = [
 
   {
     title: "JobPilot AI",
-    subtitle: "Agentic Job Search and Application Assistant",
+    subtitle: "Agentic Job Search and Application Assistant (under development)",
     description:
       "An agentic job-search assistant, currently under development, that helps users upload a resume, select target industries and locations, discover relevant job postings, track applications, and draft personalized outreach emails.",
     impact:
@@ -238,24 +240,43 @@ const projects: Project[] = [
   },
 
   {
-    title: "Atrial Fibrillation (AF) Detection with Data Augmentation",
-    subtitle: "Medical AI for ECG-Based AF Detection",
+    title: "Enhanced Atrial Fibrillation Detection with Diffusion Models",
+    subtitle: "IEEE ICCKE 2023 · Medical AI and Generative Modeling",
     description:
-      "A medical AI research project for atrial fibrillation detection using cardiac signal preprocessing, 2D Poincaré image representations, and diffusion-model-based data augmentation.",
+      "A medical AI research project that improved atrial fibrillation detection from single-lead ECG signals using Poincaré plot representations and diffusion-model-based data augmentation.",
     impact:
-      "Extracted R-R interval features from ECG-derived data, transformed 1D cardiac signals into 2D Poincaré images, generated augmented samples with a diffusion model, and trained CNN classifiers for AF detection. Published as an IEEE conference paper.",
+      "Converted ECG-derived R-R interval dynamics into 2D Poincaré images, generated synthetic atrial fibrillation samples with a denoising diffusion model, trained a CNN classifier, and compared diffusion-based augmentation with GAN-based augmentation using sample-quality and downstream classification results. Published at IEEE ICCKE 2023.",
     tech: [
       "Python",
       "PyTorch",
-      "NumPy",
-      "MATLAB",
-      "Biomedical Signal Processing",
-      "Medical AI",
+      "Diffusion Models",
+      "Convolutional Neural Networks",
+      "Signal Processing",
+      "Biomedical Research",
     ],
     github: "https://github.com/arashVsh/AF-Detection-DDPM",
     paper: "https://ieeexplore.ieee.org/abstract/document/10326310",
     imageDescription:
-      "Suggested image: an ECG signal transformed into a 2D Poincaré plot, followed by diffusion-based data augmentation and a CNN classifier for atrial fibrillation detection.",
+      "Suggested image: an ECG signal transformed into a 2D Poincaré plot, followed by diffusion-based sample generation and a CNN atrial fibrillation classifier.",
+  },
+  {
+    title: "Atrial Fibrillation Detection with GAN-Based Data Augmentation",
+    subtitle: "IEEE ICEE 2023 · ECG Classification and Generative AI",
+    description:
+      "A deep learning project for detecting atrial fibrillation from single-lead ECG signals while addressing class imbalance through GAN-based data augmentation.",
+    impact:
+      "Transformed ECG-derived R-R interval patterns into 2D Poincaré recurrence plots, generated additional atrial fibrillation samples with a generative adversarial network, and trained a five-layer CNN evaluated through four-fold cross-validation. Published at IEEE ICEE 2023.",
+    tech: [
+      "Python",
+      "Generative Adversarial Networks",
+      "Convolutional Neural Networks",
+      "Signal Processing",
+      "Biomedical Research",
+      "Data Augmentation",
+    ],
+    paper: "https://ieeexplore.ieee.org/abstract/document/10334666",
+    imageDescription:
+      "Suggested image: an ECG signal converted into a Poincaré recurrence plot, with GAN-based minority-class augmentation feeding a CNN classifier.",
   },
 ];
 
@@ -263,21 +284,28 @@ const projects: Project[] = [
 
 const publications: Publication[] = [
   {
+    title: "Defense Against Adversarial Attacks: Foundations, Strategies, and Future Directions",
+    venue: "Preprints.org · July 2026",
+    description:
+      "A comprehensive survey of defense strategies in adversarial machine learning. The paper introduces a defense model and organizes existing approaches into eight categories: training based, architecture based, uncertainty based, detection based, optimization based, transformation based, information theoretic, and hybrid defenses. It also analyzes their vulnerabilities, practical limitations, and applicability across the machine learning lifecycle.",
+    link: "https://www.preprints.org/manuscript/202607.1022",
+  },
+  {
     title: "Recent Advances in Adversarial Attacks on Model Utility, Privacy, and Explainability: A Comprehensive Survey",
-    venue: "TechRxiv preprint",
+    venue: "TechRxiv preprint · March 2026",
     description:
       "First-author survey proposing a unified multidimensional threat model for utility-harmed, privacy-harmed, and explainability-harmed attacks across the ML lifecycle.",
     link: "https://www.techrxiv.org/doi/full/10.36227/techrxiv.177272853.30003431/v1",
   },
   {
     title: "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model",
-    venue: "Google Scholar record",
+    venue: "Google Scholar record · November 2023",
     description: "Research work completed during undergraduate research at Isfahan University of Technology.",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u5HHmVD_uO8C",
   },
   {
     title: "Atrial Fibrillation (AF) Detection Using Deep Learning with GAN-based Data Augmentation",
-    venue: "Google Scholar record",
+    venue: "Google Scholar record · May 2023",
     description: "Research work completed during undergraduate research at Isfahan University of Technology.",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u-x6o8ySG0sC",
   },
@@ -396,6 +424,17 @@ const certifications: string[] = [
   "CompTIA Project Management Essentials",
   "Google Cloud Digital Leader - Results Pending",
   "CompTIA DataSys+ - Results Pending",
+];
+
+const honorsAwards = [
+  {
+    title: "Competitive Graduate Scholarship Package",
+    issuer: "University of New Brunswick, School of Graduate Studies",
+    date: "May 2024",
+    description:
+      "Awarded a competitive graduate scholarship package valued at CAD 10,000 based on my academic qualifications and proposed research project. The award reduced my annual tuition by CAD 5,000 for two years of full-time master's study at the University of New Brunswick.",
+    link: "https://drive.google.com/file/d/1cVmjzAyQn3id7bmeFhEvp0msQm8wEjkM/view?usp=sharing",
+  },
 ];
 
 
@@ -685,18 +724,18 @@ export default function App() {
             {[
               {
                 title:
-                  "Structured Prompt Consistency for Adversarial Image Detection with Frozen Vision-Language Models",
-                status: "Under review at NeurIPS 2026",
+                  "FusionBreak: Selectively Attacking Multimodal Fusion While Preserving Unimodal Decisions",
+                status: "In development",
               },
-              // {
-              //   title:
-              //     "A Survey on Defenses against Adversarial Attacks: Strategies and Limitations",
-              //   status: "Final review stage",
-              // },
               {
                 title:
                   "GraphRectify: Transferring Adversarial Example Detectors Across Neural Networks",
-                status: "In development",
+                status: "Under internal faculty review",
+              },
+              {
+                title:
+                  "Structured Prompt Consistency for Adversarial Image Detection with Frozen Vision-Language Models",
+                status: "Under review at NeurIPS 2026",
               },
               {
                 title:
@@ -779,6 +818,45 @@ export default function App() {
                 <span key={cert} className="rounded-full bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">{cert}</span>
               ))}
             </div>
+
+            <div className="mt-8">
+              <div className="mb-5 flex items-center gap-3">
+                <Award className="text-cyan-700" size={26} />
+                <h3 className="text-xl font-bold text-slate-950">Honors & Awards</h3>
+              </div>
+
+              {honorsAwards.map((award) => (
+                <div
+                  key={award.title}
+                  className="rounded-2xl border border-cyan-100 bg-cyan-50/70 p-5"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h4 className="font-bold text-slate-950">{award.title}</h4>
+
+                      <p className="mt-1 text-sm font-medium text-cyan-700">
+                        {award.issuer} · {award.date}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    {award.description}
+                  </p>
+
+                  <a
+                    href={award.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 transition hover:text-cyan-900 hover:underline"
+                  >
+                    View scholarship letter
+                    <ExternalLink size={16} />
+                  </a>
+                </div>
+              ))}
+            </div>
+
             <div className="mt-8 rounded-2xl bg-gradient-to-br from-cyan-50 to-slate-50 p-5">
               <h4 className="font-bold text-slate-950">Education</h4>
 
