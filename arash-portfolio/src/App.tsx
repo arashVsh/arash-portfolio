@@ -78,6 +78,7 @@ const profile = {
   github: "https://github.com/arashVsh",
   resumeUrl: "/Arash Vashagh - Resume.pdf",
   googleScholar: "https://scholar.google.com/citations?user=yOVk_hcAAAAJ&hl=en",
+  orcid: "https://orcid.org/0009-0001-4006-6683",
   shortBio:
     "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just publish papers.",
 };
