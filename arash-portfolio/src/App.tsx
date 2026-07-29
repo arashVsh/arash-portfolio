@@ -169,7 +169,6 @@ const projects: Project[] = [
       "Responsive Web Design",
     ],
     github: "https://github.com/arashVsh/my-sister-portfolio",
-    paper: "https://yasminvashagh.com",
     imageDescription:
       "Suggested image: a polished portfolio homepage showing academic, research, art, music, awards, and contact sections across desktop and mobile layouts.",
   },
