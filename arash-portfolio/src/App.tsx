@@ -80,7 +80,7 @@ const profile = {
   googleScholar: "https://scholar.google.com/citations?user=yOVk_hcAAAAJ&hl=en",
   orcid: "https://orcid.org/0009-0001-4006-6683",
   shortBio:
-    "I turn complex AI and cybersecurity ideas into practical tools people can use. My work combines machine learning, software engineering, APIs, mobile apps, cloud tools, and a strong security mindset. I am completing my MSc at UNB and looking for industry roles where I can build reliable products, not just publish papers.",
+    "I take a vague idea, research it, investigate the available resources, build a project, and then publish it.",
 };
 
 const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "Educator", "Contact"];
@@ -146,7 +146,26 @@ const skills: SkillGroup[] = [
 ];
 
 const projects: Project[] = [
-
+  {
+    title: "ConformalShift",
+    subtitle: "Targeted Event Reordering Against Adaptive ECG Monitoring",
+    description:
+      "A healthcare AI security project showing that adaptive ECG monitoring systems can be attacked by changing only the order in which they receive authentic feedback from doctors.",
+    impact:
+      "Developed and evaluated an event-reordering attack that reduces the detection of important abnormal heartbeats without modifying ECG signals, heartbeat labels, model predictions, doctor feedback, or the feedback items received by the system.",
+    tech: [
+      "Python",
+      "Scikit-learn",
+      "Adaptive Conformal Prediction",
+      "Adversarial Machine Learning",
+      "ECG Analysis",
+      "Healthcare AI",
+      "Signal Processing",
+    ],
+    paper: "https://arxiv.org/abs/2608.03628",
+    imageDescription:
+      "Suggested image: an adaptive ECG monitoring system receiving genuine doctor feedback in a changed order, causing an important abnormal heartbeat to be missed while the ECG signals and feedback remain unchanged.",
+  },
   {
     title: "JobPilot AI",
     subtitle: "Agentic Job Search and Application Assistant (under development)",
@@ -284,6 +303,13 @@ const projects: Project[] = [
 
 
 const publications: Publication[] = [
+  {
+    title: "ConformalShift: Targeted Event Reordering Against Adaptive ECG Monitoring",
+    venue: "arXiv preprint · August 2026",
+    description:
+      "Introduces an attack against adaptive ECG monitoring systems that changes only the order in which authentic feedback from doctors is received. The attack does not modify ECG signals, heartbeat labels, model predictions, doctor feedback, or the set of feedback items, but can still reduce the detection of important abnormal heartbeats.",
+    link: "https://arxiv.org/abs/2608.03628",
+  },
   {
     title: "Defense Against Adversarial Attacks: Foundations, Strategies, and Future Directions",
     venue: "Preprints.org · July 2026",
