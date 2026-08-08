@@ -123,6 +123,8 @@ const skills: SkillGroup[] = [
       "C++",
       "JavaScript",
       "React",
+      "Django",
+      "HTML/CSS",
       "FastAPI",
       "Flask",
       "REST APIs",
@@ -138,6 +140,8 @@ const skills: SkillGroup[] = [
       "Microsoft Azure",
       "Google Cloud",
       "Docker",
+      "Gunicorn",
+      "WhiteNoise",
       "Git/GitHub",
       "Jupyter",
       "MLflow",
@@ -189,6 +193,28 @@ const projects: Project[] = [
     imageDescription:
       "Suggested image: an adaptive ECG monitoring system receiving genuine doctor feedback in a changed order, causing an important abnormal heartbeat to be missed while the ECG signals and feedback remain unchanged.",
   },
+  {
+    title: "My Sister's Portfolio",
+    subtitle: "Full-Stack Personal Portfolio Website",
+    description:
+      "A responsive portfolio website I designed and developed for my amazing sister to present her academic background, biomedical research, science education, artwork, violin performances, awards, and competitive swimming achievements.",
+    impact:
+      "Built and deployed a production-ready Django website with responsive layouts, sticky navigation, an artwork gallery with image previews, locally hosted performance videos, downloadable résumé support, static asset delivery, and environment-based production configuration.",
+    tech: [
+      "Python",
+      "Django",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "WhiteNoise",
+      "Gunicorn",
+      "Responsive Web Design",
+    ],
+    github: "https://github.com/arashVsh/my-sister-portfolio",
+    imageDescription:
+      "Suggested image: a polished portfolio homepage showing academic, research, art, music, awards, and contact sections across desktop and mobile layouts.",
+  },
+
   {
     title: "JobPilot AI",
     subtitle: "Agentic Job Search and Application Assistant (under development)",
