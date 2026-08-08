@@ -146,13 +146,35 @@ const skills: SkillGroup[] = [
 ];
 
 const projects: Project[] = [
+    {
+    title: "CohortHijack",
+    subtitle: "Robustness of Single-Cell Annotation to Companion Cell Removal",
+    description:
+      "A robustness project studying whether cohort-dependent single-cell annotation can be manipulated by removing selected companion cells while leaving the target cell, trained model, and base prediction unchanged.",
+    impact:
+      "Developed random, structured, greedy, multi-start, and beam-search removal strategies across PBMC3K and Paul15, with mechanism ablations and CellTypist validation. The strongest multi-start attack changed 24.33% of linear-SVM targets while successful attacks required only small cohort removals and kept collateral changes low in the controlled pipeline.",
+    tech: [
+      "Python",
+      "Scanpy",
+      "CellTypist",
+      "Scikit-learn",
+      "Single-Cell RNA Sequencing",
+      "Adversarial Machine Learning",
+      "Robustness Evaluation",
+      "Search Algorithms",
+    ],
+    github: "https://github.com/arashVsh/CohortHijack",
+    paper: "https://arxiv.org/abs/2608.05900",
+    imageDescription:
+      "Suggested image: an unchanged target cell surrounded by a query cohort, with selected companion cells removed and the target's refined annotation changing while its own expression profile and base prediction remain fixed.",
+  },
   {
     title: "ConformalShift",
     subtitle: "Targeted Event Reordering Against Adaptive ECG Monitoring",
     description:
       "A healthcare AI security project showing that adaptive ECG monitoring systems can be attacked by changing only the order in which they receive authentic feedback from doctors.",
     impact:
-      "Developed and evaluated an event-reordering attack that reduces the detection of important abnormal heartbeats without modifying ECG signals, heartbeat labels, model predictions, doctor feedback, or the feedback items received by the system.",
+      "Developed and evaluated an event-reordering attack that reduces the detection of important abnormal heartbeats without modifying ECG signals, heartbeat labels, model predictions, or doctors' feedback",
     tech: [
       "Python",
       "Scikit-learn",
@@ -162,6 +184,7 @@ const projects: Project[] = [
       "Healthcare AI",
       "Signal Processing",
     ],
+    github: "https://github.com/arashVsh/ConformalShift-adversarial-ecg",
     paper: "https://arxiv.org/abs/2608.03628",
     imageDescription:
       "Suggested image: an adaptive ECG monitoring system receiving genuine doctor feedback in a changed order, causing an important abnormal heartbeat to be missed while the ECG signals and feedback remain unchanged.",
@@ -304,6 +327,13 @@ const projects: Project[] = [
 
 const publications: Publication[] = [
   {
+    title: "CohortHijack: Robustness of Single-Cell Annotation to Companion Cell Removal",
+    venue: "arXiv preprint · August 2026",
+    description:
+      "Introduces a target-preserving robustness audit for cohort-dependent single-cell annotation. CohortHijack removes selected non-target companion cells while keeping the target expression profile, trained classifier, and base prediction unchanged, and evaluates structured removal, search-based attacks, mechanism ablations, and CellTypist majority voting.",
+    link: "https://arxiv.org/abs/2608.05900",
+  },
+  {
     title: "ConformalShift: Targeted Event Reordering Against Adaptive ECG Monitoring",
     venue: "arXiv preprint · August 2026",
     description:
@@ -347,22 +377,42 @@ const experiences: Experience[] = [
     org: "University of New Brunswick & Trustworthy and Secure AI Lab",
     date: "Sep 2024 - Present",
     points: [
-      "Conduct MSc thesis research in adversarial machine learning, focusing on attacks, detection, robustness, and trustworthy AI.",
-      "Co-authored a survey on adversarial attacks and another survey on adversarial defense mechanisms.",
+      "Conducting MSc thesis research in adversarial machine learning, focusing on attacks, detection, robustness, and trustworthy AI.",
+      "Co-authored a survey on adversarial attacks and another survey on defense mechanisms.",
       "Proposed and implemented adversarial detection mechanisms currently under internal faculty review.",
       "Develop an adversarial attack on multimodal fusion models, with manuscript in progress.",
-      "Coordinate graduate student work and manage TSAI Lab updates and educational content.",
+      "Co-authored CohortHijack, a study showing that an AI system can change how it labels a cell when some surrounding cells are removed, even though the cell itself is unchanged.",
+      "Co-authored ConformalShift, a study showing that an ECG monitoring system can miss important abnormal heartbeats when genuine doctor feedback is received in a different order.",
+      "Coordinating graduate student work and manage TSAI Lab updates and educational content.",
     ],
+
     links: [
       {
         label: "Adversarial Attacks Survey",
         url: "https://www.techrxiv.org/doi/full/10.36227/techrxiv.177272853.30003431/v1",
       },
       {
+        label: "Defense Mechanisms Survey",
+        url: "https://www.preprints.org/manuscript/202607.1022",
+      },
+      {
+        label: "CohortHijack Publication",
+        url: "https://arxiv.org/abs/2608.05900",
+      },
+      {
+        label: "CohortHijack GitHub",
+        url: "https://github.com/arashVsh/CohortHijack",
+      },
+      {
+        label: "ConformalShift Publication",
+        url: "https://arxiv.org/abs/2608.03628",
+      },
+      {
         label: "TSAI Lab LinkedIn",
         url: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
       },
     ],
+
   },
   {
     role: "Graduate Teaching Assistant",
