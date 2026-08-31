@@ -435,7 +435,7 @@ const experiences: Experience[] = [
     org: "Gigi Drive · Contract Full-time",
     date: "Aug 2026 - Present",
     location: "Fredericton, New Brunswick, Canada · Hybrid",
-    logo: "/logos/gigi-drive-logo.png",
+    logo: "/logos/gigi-drive-logo.jpeg",
     points: [
       "Part of the founding team at Gigi Drive, leading the technical direction and early-stage product development.",
       "Responsible for technology strategy, platform planning, and system design as we prepare for launch.",
