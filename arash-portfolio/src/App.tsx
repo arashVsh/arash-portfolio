@@ -49,6 +49,8 @@ type Experience = {
   role: string;
   org: string;
   date: string;
+  location?: string;
+  logo?: string;
   points: string[];
   link?: string;
   links?: {
@@ -95,6 +97,7 @@ const skills: SkillGroup[] = [
       "NLP",
       "RAG/LLMOps",
       "Agentic AI",
+      "LLM Agents",
       "Reinforcement Learning",
       "OpenAI API",
       "Signal Processing",
@@ -111,6 +114,7 @@ const skills: SkillGroup[] = [
       "Robustness Evaluation",
       "Phishing Detection",
       "Trustworthy AI",
+      "LLM Agent Security",
     ],
   },
   {
@@ -150,6 +154,27 @@ const skills: SkillGroup[] = [
 ];
 
 const projects: Project[] = [
+  {
+    title: "ChronosAttack",
+    subtitle: "Adversarial Tool Scheduling Attacks on LLM Agents",
+    description:
+      "An AI security project studying whether LLM-agent decisions can be changed by altering only the timing and order of authentic tool responses, without modifying their content.",
+    impact:
+      "Developed a delay-only scheduling attack and evaluated it across GPT-5.6 Sol, Gemini 3.6 Flash, DeepSeek V4 Flash, and Claude Sonnet 4.6 in stateful and stateless settings. The experiments found strong but model-dependent order sensitivity, including large decision shifts from small scheduling changes, and evaluated synchronization and order-consistency defenses.",
+    tech: [
+      "Python",
+      "Large Language Models",
+      "LLM Agents",
+      "Adversarial Machine Learning",
+      "AI Security",
+      "Robustness Evaluation",
+      "Asynchronous Systems",
+    ],
+    github: "https://github.com/arashVsh/ChronosAttack",
+    paper: "https://www.researchsquare.com/article/rs-10854515/v1",
+    imageDescription:
+      "Suggested image: three authentic tool responses arriving at an LLM agent under a natural schedule and a delay-induced reordered schedule, leading to different final decisions while the tool content remains unchanged.",
+  },
     {
     title: "CohortHijack",
     subtitle: "Robustness of Single-Cell Annotation to Companion Cell Removal",
@@ -353,6 +378,13 @@ const projects: Project[] = [
 
 const publications: Publication[] = [
   {
+    title: "ChronosAttack: Adversarial Tool Scheduling Attacks on LLM Agents",
+    venue: "Research Square · August 2026",
+    description:
+      "Introduces a delay-only scheduling attack against tool-using LLM agents. ChronosAttack changes when authentic tool responses arrive without modifying, adding, removing, or accelerating them, and evaluates order sensitivity across GPT-5.6 Sol, Gemini 3.6 Flash, DeepSeek V4 Flash, and Claude Sonnet 4.6.",
+    link: "https://www.researchsquare.com/article/rs-10854515/v1",
+  },
+  {
     title: "CohortHijack: Robustness of Single-Cell Annotation to Companion Cell Removal",
     venue: "arXiv preprint · August 2026",
     description:
@@ -399,11 +431,23 @@ const publications: Publication[] = [
 
 const experiences: Experience[] = [
   {
+    role: "Chief Technology Officer (CTO)",
+    org: "Gigi Drive · Contract Full-time",
+    date: "Aug 2026 - Present",
+    location: "Fredericton, New Brunswick, Canada · Hybrid",
+    logo: "/logos/gigi-drive-logo.png",
+    points: [
+      "Part of the founding team at Gigi Drive, leading the technical direction and early-stage product development.",
+      "Responsible for technology strategy, platform planning, and system design as we prepare for launch.",
+    ],
+  },
+  {
     role: "Graduate Research Assistant / Team Lead",
     org: "University of New Brunswick & Trustworthy and Secure AI Lab",
     date: "Sep 2024 - Present",
     points: [
       "Conducting MSc thesis research in adversarial machine learning, focusing on attacks, detection, robustness, and trustworthy AI.",
+      "Developed ChronosAttack, a delay-only tool-scheduling attack showing that the order of authentic tool responses can change LLM-agent decisions across multiple model families.",
       "Co-authored a survey on adversarial attacks and another survey on defense mechanisms.",
       "Proposed and implemented adversarial detection mechanisms currently under internal faculty review.",
       "Develop an adversarial attack on multimodal fusion models, with manuscript in progress.",
@@ -420,6 +464,14 @@ const experiences: Experience[] = [
       {
         label: "Defense Mechanisms Survey",
         url: "https://www.preprints.org/manuscript/202607.1022",
+      },
+      {
+        label: "ChronosAttack Publication",
+        url: "https://www.researchsquare.com/article/rs-10854515/v1",
+      },
+      {
+        label: "ChronosAttack GitHub",
+        url: "https://github.com/arashVsh/ChronosAttack",
       },
       {
         label: "CohortHijack Publication",
@@ -525,7 +577,7 @@ const certifications: string[] = [
   "CompTIA Security+",
   "CompTIA Data+",
   "CompTIA Project Management Essentials",
-  "Google Cloud Digital Leader - Results Pending",
+  "Google Cloud Digital Leader",
   "CompTIA DataSys+ - Results Pending",
 ];
 
@@ -629,7 +681,7 @@ export default function App() {
             </div>
 
             <div className="pl-4 text-cyan-600">
-              Open to relocation across Canada
+              Remote in Canada & US · On-site in Fredericton
             </div>
           </div>
 
@@ -869,10 +921,22 @@ export default function App() {
           <div className="space-y-5">
             {experiences.map((exp) => (
               <div key={`${exp.role}-${exp.org}`} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-lg shadow-slate-900/5">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-950">{exp.role}</h3>
-                    <p className="mt-1 text-cyan-700">{exp.org}</p>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex items-start gap-4">
+                    {exp.logo && (
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.org} logo`}
+                        className="h-14 w-14 shrink-0 rounded-xl border border-slate-100 bg-white object-contain p-1.5"
+                      />
+                    )}
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-950">{exp.role}</h3>
+                      <p className="mt-1 text-cyan-700">{exp.org}</p>
+                      {exp.location && (
+                        <p className="mt-1 text-sm text-slate-500">{exp.location}</p>
+                      )}
+                    </div>
                   </div>
                   <p className="rounded-full bg-slate-50 px-4 py-2 text-sm text-slate-600">{exp.date}</p>
                 </div>
@@ -1121,7 +1185,7 @@ export default function App() {
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Contact</p>
               <h2 className="text-3xl font-black md:text-4xl">Looking for someone who learns fast, builds seriously, and cares about the work?</h2>
               <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-                I am looking for machine learning engineering, software development, cybersecurity, and applied AI roles. I can relocate within Canada after my graduation in August 2026 and bring a mix of valuable research and hands-on experience.
+                I am looking for machine learning engineering, software development, cybersecurity, and applied AI roles. I am open to remote opportunities across Canada and the US, as well as on-site roles in Fredericton, and bring a mix of research and hands-on experience.
               </p>
               <p className="mt-4 text-slate-300">
                 Email: {profile.email}
