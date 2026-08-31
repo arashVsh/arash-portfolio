@@ -880,7 +880,7 @@ export default function App() {
               {
                 title:
                   "FusionBreak: Selectively Attacking Multimodal Fusion While Preserving Unimodal Decisions",
-                status: "In development",
+                status: "Under internal faculty review",
               },
               {
                 title:
@@ -894,8 +894,8 @@ export default function App() {
               },
               {
                 title:
-                  "Randomized Inference over Neuron Signatures for Robust Adversarial Detection",
-                status: "In development",
+                  "Learning to Verify: Signature-Guided Detection of Adaptive Adversarial Examples",
+                status: "Under internal faculty review",
               },
             ].map((paper) => (
               <div
