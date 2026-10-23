@@ -19,29 +19,21 @@ Main sections:
 
 ## Featured Projects
 
-### Response Profiles for Vision-Language Models
+### ProblemPatch
 
-An adversarial image detector that analyzes semantic response patterns from a frozen vision-language model. [arXiv preprint](https://arxiv.org/abs/2610.10436).
-
-### GraphRectify
-
-A graph-based framework for transferring adversarial example detectors across neural network backbones. [arXiv preprint](https://arxiv.org/abs/2610.10423).
-
-### EvasionRL
-
-A deployed reinforcement learning security application demonstrating test-time evasion attacks against a DQN controlled MountainCar agent through clean and attacked rollouts.
-
-### PaperWise AI
-
-A deployed research paper RAG and LLMOps assistant supporting PDF upload, citation grounded question answering, structured summaries, paper comparison, reviewer concerns, and PDF note export. [Live app](https://paperwise-ai.streamlit.app/) · [GitHub](https://github.com/arashVsh/research-paper-ragops).
+A full-stack campus issue reporting platform with an interactive map, status updates, and a facilities staff dashboard. [Live site](https://problempatch.com/).
 
 ### CalmChat
 
 An AI-assisted conversation prototype with web and desktop clients, a Java messaging backend, and optional NLP-based respectful rewrite suggestions. [Live app](https://calmchat.info/) · [GitHub](https://github.com/arashVsh/CalmChat).
 
-### ProblemPatch
+### PaperWise AI
 
-A full-stack campus issue reporting platform with an interactive map, status updates, and a facilities staff dashboard.
+A deployed research paper RAG and LLMOps assistant supporting PDF upload, citation grounded question answering, structured summaries, paper comparison, reviewer concerns, and PDF note export. [Live app](https://paperwise-ai.streamlit.app/) · [GitHub](https://github.com/arashVsh/research-paper-ragops).
+
+### EvasionRL
+
+A deployed reinforcement learning security application demonstrating test-time evasion attacks against a DQN controlled MountainCar agent through clean and attacked rollouts.
 
 ### PromptShield
 
@@ -61,11 +53,9 @@ A healthcare AI research project using ECG preprocessing, two dimensional Poinca
 
 The project compared diffusion models with generative adversarial networks for minority class augmentation and was published at the **2023 IEEE 13th International Conference on Computer and Knowledge Engineering**.
 
-### Atrial Fibrillation Detection with GAN Based Data Augmentation
+### Atrial Fibrillation Detection with GAN-Based Data Augmentation
 
-A healthcare AI research project using ECG signal preprocessing, two dimensional Poincaré recurrence plots, GAN based minority class augmentation, and convolutional neural networks.
-
-The project was published at the **2023 IEEE 31st International Conference on Electrical Engineering**.
+An ECG classification project using Poincaré recurrence plots, GAN-based data augmentation, and a CNN. Published at IEEE ICEE 2023. [GitHub](https://github.com/arashVsh/Atrial_Fibrillation_Detection_Using_GAN_Based_Augmentation).
 
 ## Publications
 

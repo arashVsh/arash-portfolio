@@ -162,26 +162,43 @@ const skills: SkillGroup[] = [
 
 const projects: Project[] = [
   {
-    title: "Response Profiles for Vision-Language Models",
-    subtitle: "Adversarial Image Detection · arXiv 2026",
+    title: "ProblemPatch",
+    subtitle: "Campus Issue Reporting and Facilities Management",
+    date: "Sep 2026 - Oct 2026",
     description:
-      "Detects adversarial images by examining how a frozen vision-language model responds to a collection of semantic prompts, without changing the underlying model.",
+      "A full-stack web platform for reporting campus facility problems, exploring reported issues on an interactive map, and following updates.",
     impact:
-      "Built a compact response-profile detector using category statistics, relationships between prompts, deviations from clean references, and stability under weak image transformations; evaluated it across multiple attacks and visual backbones.",
-    tech: ["Python", "Vision-Language Models", "Adversarial Detection", "Robustness Evaluation"],
-    paper: "https://arxiv.org/abs/2610.10436",
-    imageDescription: "Semantic prompt responses summarized into an adversarial image detection profile.",
+      "Created a dedicated facilities dashboard for managing reports and coordinating responses, with an emphasis on accessible interfaces and clear communication between campus users and staff.",
+    tech: ["Full-Stack Development", "User Interface Design", "Database Management"],
+    live: "https://problempatch.com/",
+    imageDescription: "Campus issue map, reporting form, and facilities staff dashboard.",
   },
   {
-    title: "GraphRectify",
-    subtitle: "Transferable Adversarial Example Detection · arXiv 2026",
+    title: "CalmChat",
+    subtitle: "AI-Assisted Conversation Platform · Prototype",
+    date: "Aug 2026 - Oct 2026",
     description:
-      "A graph-based framework for reusing an adversarial example detector when a protected neural network is replaced or upgraded.",
+      "A conversation platform designed to make interactions calmer and more supportive through a simple web and desktop interface. Further development is underway.",
     impact:
-      "Adapts intermediate features from a new classifier backbone to a learned graph detector, reducing the need to train a detector from scratch and evaluating transfer across architectures and attacks.",
-    tech: ["Python", "Graph-Based Learning", "Transfer Learning", "Adversarial Detection"],
-    paper: "https://arxiv.org/abs/2610.10423",
-    imageDescription: "A graph detector transferred from one neural network backbone to another.",
+      "Built a Java-based messaging backend, a web and desktop client, and an NLP service that can suggest respectful rewrites for harmful drafts, with optional LLM assistance.",
+    tech: ["Java", "NLP", "Large Language Models", "React", "FastAPI"],
+    github: "https://github.com/arashVsh/CalmChat",
+    live: "https://calmchat.info/",
+    imageDescription: "CalmChat messaging interface with an optional respectful rewrite suggestion.",
+  },
+  {
+    title: "PaperWise AI",
+    subtitle: "Deployed Research Paper RAG / LLMOps App",
+    date: "Jun 2026 - Present",
+    description:
+      "A deployed research assistant for uploading PDF papers, asking questions with citation-based answers, generating structured summaries, comparing papers, identifying possible reviewer concerns, and exporting PDF notes.",
+    impact:
+      "Implemented PDF text extraction and chunking, TF-IDF retrieval, optional OpenAI API answer generation, offline retrieval mode, citation display, and PDF export.",
+    tech: ["Python", "NLP", "Streamlit", "Scikit-learn", "OpenAI API", "pypdf", "ReportLab"],
+    github: "https://github.com/arashVsh/research-paper-ragops",
+    live: "https://paperwise-ai.streamlit.app/",
+    imageDescription:
+      "Suggested image: a research assistant interface with PDF upload, question answering, citations, and export button.",
   },
   {
     title: "ChronosAttack",
@@ -268,7 +285,6 @@ const projects: Project[] = [
     imageDescription:
       "Suggested image: a polished portfolio homepage showing academic, research, art, music, awards, and contact sections across desktop and mobile layouts.",
   },
-
   {
     title: "EvasionRL",
     subtitle: "Real-Time Evasion Attacks on Reinforcement Learning Agents",
@@ -293,52 +309,13 @@ const projects: Project[] = [
       "Suggested image: two side-by-side MountainCar agents, one clean and one under adversarial observation attack, with a playback panel and final robustness summary.",
   },
   {
-    title: "PaperWise AI",
-    subtitle: "Deployed Research Paper RAG / LLMOps App",
-    date: "Jun 2026 - Present",
-    description:
-      "A deployed research assistant for uploading PDF papers, asking questions with citation-based answers, generating structured summaries, comparing papers, identifying possible reviewer concerns, and exporting PDF notes.",
-    impact:
-      "Implemented PDF text extraction and chunking, TF-IDF retrieval, optional OpenAI API answer generation, offline retrieval mode, citation display, and PDF export.",
-    tech: ["Python", "NLP", "Streamlit", "Scikit-learn", "OpenAI API", "pypdf", "ReportLab"],
-    github: "https://github.com/arashVsh/research-paper-ragops",
-    live: "https://paperwise-ai.streamlit.app/",
-    imageDescription:
-      "Suggested image: a research assistant interface with PDF upload, question answering, citations, and export button.",
-  },
-  {
-    title: "CalmChat",
-    subtitle: "AI-Assisted Conversation Platform · Prototype",
-    date: "Aug 2026 - Oct 2026",
-    description:
-      "A conversation platform designed to make interactions calmer and more supportive through a simple web and desktop interface. Further development is underway.",
-    impact:
-      "Built a Java-based messaging backend, a web and desktop client, and an NLP service that can suggest respectful rewrites for harmful drafts, with optional LLM assistance.",
-    tech: ["Java", "NLP", "Large Language Models", "React", "FastAPI"],
-    github: "https://github.com/arashVsh/CalmChat",
-    live: "https://calmchat.info/",
-    imageDescription: "CalmChat messaging interface with an optional respectful rewrite suggestion.",
-  },
-  {
-    title: "ProblemPatch",
-    subtitle: "Campus Issue Reporting and Facilities Management",
-    date: "Sep 2026 - Oct 2026",
-    description:
-      "A full-stack web platform for reporting campus facility problems, exploring reported issues on an interactive map, and following updates.",
-    impact:
-      "Created a dedicated facilities dashboard for managing reports and coordinating responses, with an emphasis on accessible interfaces and clear communication between campus users and staff.",
-    tech: ["Full-Stack Development", "User Interface Design", "Database Management"],
-    imageDescription: "Campus issue map, reporting form, and facilities staff dashboard.",
-  },
-
-  {
     title: "PromptShield",
     subtitle: "Adversarial Detection for Vision-Language Models",
     description:
       "An adversarial image detection prototype for vision-language models using structured prompts and semantic consistency features.",
     impact: "Built the full pipeline: feature extraction, detector training, attack evaluation, ablations, and cross-model testing.",
     tech: ["Python", "PyTorch", "OpenCLIP", "NumPy", "Scikit-learn"],
-    github: "https://github.com/arashVsh/VLM_SourceCode",
+    github: "https://github.com/arashVsh/PromptShield",
     imageDescription:
       "Suggested image: a clean abstract graphic showing an image encoder connected to text prompts, semantic similarity scores, and a detector output.",
   },
@@ -364,7 +341,6 @@ const projects: Project[] = [
     imageDescription:
       "Suggested image: a mobile app screenshot mockup showing a URL input field, risk score, and safety recommendation.",
   },
-
   {
     title: "Enhanced Atrial Fibrillation Detection with Diffusion Models",
     subtitle: "IEEE ICCKE 2023 · Medical AI and Generative Modeling",
@@ -380,7 +356,7 @@ const projects: Project[] = [
       "Signal Processing",
       "Biomedical Research",
     ],
-    github: "https://github.com/arashVsh/AF-Detection-DDPM",
+    github: "https://github.com/arashVsh/Atrial_Fibrillation_Detection_Using_Diffusion_Models",
     paper: "https://ieeexplore.ieee.org/abstract/document/10326310",
     imageDescription:
       "Suggested image: an ECG signal transformed into a 2D Poincaré plot, followed by diffusion-based sample generation and a CNN atrial fibrillation classifier.",
@@ -400,6 +376,7 @@ const projects: Project[] = [
       "Biomedical Research",
       "Data Augmentation",
     ],
+    github: "https://github.com/arashVsh/Atrial_Fibrillation_Detection_Using_GAN_Based_Augmentation",
     paper: "https://ieeexplore.ieee.org/abstract/document/10334666",
     imageDescription:
       "Suggested image: an ECG signal converted into a Poincaré recurrence plot, with GAN-based minority-class augmentation feeding a CNN classifier.",
