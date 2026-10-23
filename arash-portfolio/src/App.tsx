@@ -30,11 +30,13 @@ type SkillGroup = {
 type Project = {
   title: string;
   subtitle: string;
+  date?: string;
   description: string;
   impact: string;
   tech: string[];
   github?: string;
   paper?: string;
+  live?: string;
   imageDescription: string;
 };
 
@@ -268,28 +270,6 @@ const projects: Project[] = [
   },
 
   {
-    title: "JobPilot AI",
-    subtitle: "Agentic Job Search and Application Assistant (under development)",
-    description:
-      "An agentic job-search assistant, currently under development, that helps users upload a resume, select target industries and locations, discover relevant job postings, track applications, and draft personalized outreach emails.",
-    impact:
-      "Built a multi-agent workflow with job discovery, resume-based fit scoring, location and salary filtering, rejected-job debugging, persistent SQLite tracking, follow-up reminders, agent activity logs, application reports, and company-specific email drafting.",
-    tech: [
-      "Python",
-      "Streamlit",
-      "SQLite",
-      "OpenAI API",
-      "SerpAPI",
-      "Tavily API",
-      "Pandas",
-      "Agentic AI",
-      "RAG",
-    ],
-    github: "https://github.com/arashVsh/jobpilot_ai_mvp",
-    imageDescription:
-      "Suggested image: an agentic job-search dashboard showing resume upload, job filters, matched job cards, fit scores, rejected-job debug logs, and an email draft panel.",
-  },
-  {
     title: "EvasionRL",
     subtitle: "Real-Time Evasion Attacks on Reinforcement Learning Agents",
     description:
@@ -308,22 +288,47 @@ const projects: Project[] = [
       "Deep Reinforcement Learning",
     ],
     github: "https://github.com/arashVsh/EvasionRL",
-    paper: "https://arashvsh-evasionrl-app-najahp.streamlit.app/",
+    live: "https://arashvsh-evasionrl-app-najahp.streamlit.app/",
     imageDescription:
       "Suggested image: two side-by-side MountainCar agents, one clean and one under adversarial observation attack, with a playback panel and final robustness summary.",
   },
   {
     title: "PaperWise AI",
-    subtitle: "Research Paper RAG / LLMOps Assistant",
+    subtitle: "Deployed Research Paper RAG / LLMOps App",
+    date: "Jun 2026 - Present",
     description:
-      "A public web app that helps users upload research papers, ask citation-grounded questions, compare papers, and export answers as PDF notes.",
+      "A deployed research assistant for uploading PDF papers, asking questions with citation-based answers, generating structured summaries, comparing papers, identifying possible reviewer concerns, and exporting PDF notes.",
     impact:
-      "Implemented PDF ingestion, text extraction, TF-IDF retrieval, OpenAI API integration, offline fallback, suggested questions, and retrieval metrics.",
-    tech: ["Python", "Streamlit", "Scikit-learn", "OpenAI API", "pypdf", "ReportLab"],
+      "Implemented PDF text extraction and chunking, TF-IDF retrieval, optional OpenAI API answer generation, offline retrieval mode, citation display, and PDF export.",
+    tech: ["Python", "NLP", "Streamlit", "Scikit-learn", "OpenAI API", "pypdf", "ReportLab"],
     github: "https://github.com/arashVsh/research-paper-ragops",
-    paper: "https://paperwise-ai.streamlit.app/",
+    live: "https://paperwise-ai.streamlit.app/",
     imageDescription:
       "Suggested image: a research assistant interface with PDF upload, question answering, citations, and export button.",
+  },
+  {
+    title: "CalmChat",
+    subtitle: "AI-Assisted Conversation Platform · Prototype",
+    date: "Aug 2026 - Oct 2026",
+    description:
+      "A conversation platform designed to make interactions calmer and more supportive through a simple web and desktop interface. Further development is underway.",
+    impact:
+      "Built a Java-based messaging backend, a web and desktop client, and an NLP service that can suggest respectful rewrites for harmful drafts, with optional LLM assistance.",
+    tech: ["Java", "NLP", "Large Language Models", "React", "FastAPI"],
+    github: "https://github.com/arashVsh/CalmChat",
+    live: "https://calmchat.info/",
+    imageDescription: "CalmChat messaging interface with an optional respectful rewrite suggestion.",
+  },
+  {
+    title: "ProblemPatch",
+    subtitle: "Campus Issue Reporting and Facilities Management",
+    date: "Sep 2026 - Oct 2026",
+    description:
+      "A full-stack web platform for reporting campus facility problems, exploring reported issues on an interactive map, and following updates.",
+    impact:
+      "Created a dedicated facilities dashboard for managing reports and coordinating responses, with an emphasis on accessible interfaces and clear communication between campus users and staff.",
+    tech: ["Full-Stack Development", "User Interface Design", "Database Management"],
+    imageDescription: "Campus issue map, reporting form, and facilities staff dashboard.",
   },
 
   {
@@ -873,7 +878,10 @@ export default function App() {
             <article key={project.title} className="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10">
               <div className="h-48 bg-gradient-to-br from-slate-950 via-slate-800 to-cyan-800 p-5 text-white">
                 <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm text-cyan-200">{project.subtitle}</p>
+                  <div>
+                    <p className="text-sm text-cyan-200">{project.subtitle}</p>
+                    {project.date && <p className="mt-2 text-xs text-slate-300">{project.date}</p>}
+                  </div>
                   <h3 className="text-3xl font-black">{project.title}</h3>
                 </div>
               </div>
@@ -887,11 +895,8 @@ export default function App() {
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {project.github && <LinkButton href={project.github} variant="secondary"><ExternalLink size={16} /> GitHub</LinkButton>}
-                  {project.paper && (
-                    <LinkButton href={project.paper} variant="secondary">
-                      <BookOpen size={16} /> {project.paper?.includes("streamlit.app") ? "Live App" : "Paper"}
-                    </LinkButton>
-                  )}
+                  {project.live && <LinkButton href={project.live} variant="secondary"><ExternalLink size={16} /> Live App</LinkButton>}
+                  {project.paper && <LinkButton href={project.paper} variant="secondary"><BookOpen size={16} /> Paper</LinkButton>}
                 </div>
               </div>
             </article>
@@ -930,12 +935,12 @@ export default function App() {
               {
                 title:
                   "FusionBreak: Selectively Attacking Multimodal Fusion While Preserving Unimodal Decisions",
-                status: "Under internal faculty review",
+                status: "Under review at ICLR 2027",
               },
               {
                 title:
                   "Learning to Verify: Signature-Guided Detection of Adaptive Adversarial Examples",
-                status: "Under internal faculty review",
+                status: "Under review at IEEE SSCI 2027",
               },
             ].map((paper) => (
               <div

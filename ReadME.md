@@ -27,17 +27,21 @@ An adversarial image detector that analyzes semantic response patterns from a fr
 
 A graph-based framework for transferring adversarial example detectors across neural network backbones. [arXiv preprint](https://arxiv.org/abs/2610.10423).
 
-### JobPilot AI
-
-An agentic job search and application assistant with resume based matching, job discovery, location and salary filtering, application tracking, follow-up reminders, rejected job analysis, and outreach email drafting.
-
 ### EvasionRL
 
 A deployed reinforcement learning security application demonstrating test-time evasion attacks against a DQN controlled MountainCar agent through clean and attacked rollouts.
 
 ### PaperWise AI
 
-A research paper RAG and LLMOps assistant supporting PDF upload, citation grounded question answering, paper comparison, suggested questions, retrieval evaluation, and PDF note export.
+A deployed research paper RAG and LLMOps assistant supporting PDF upload, citation grounded question answering, structured summaries, paper comparison, reviewer concerns, and PDF note export. [Live app](https://paperwise-ai.streamlit.app/) · [GitHub](https://github.com/arashVsh/research-paper-ragops).
+
+### CalmChat
+
+An AI-assisted conversation prototype with web and desktop clients, a Java messaging backend, and optional NLP-based respectful rewrite suggestions. [Live app](https://calmchat.info/) · [GitHub](https://github.com/arashVsh/CalmChat).
+
+### ProblemPatch
+
+A full-stack campus issue reporting platform with an interactive map, status updates, and a facilities staff dashboard.
 
 ### PromptShield
 
