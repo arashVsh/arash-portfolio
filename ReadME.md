@@ -12,12 +12,20 @@ Main sections:
 - **Skills**: machine learning, AI security, software development, cloud, signal processing, biomedical research, and technical tools
 - **Projects**: applied AI, adversarial machine learning, agentic AI, medical AI, reinforcement learning security, and software projects
 - **Publications**: adversarial machine learning surveys and IEEE healthcare AI publications
-- **Experience**: research, teaching, lab leadership, conference reviewing, and education work
+- **Experience**: Ondiway CTO, UNB research and teaching, lab leadership, conference reviewing, and education work
 - **Honors & Awards**: competitive graduate scholarship and related recognition
 - **Educator**: Persian AI Security and Adversarial Machine Learning course
 - **Contact**: email, LinkedIn, GitHub, Google Scholar, and resume access
 
 ## Featured Projects
+
+### Response Profiles for Vision-Language Models
+
+An adversarial image detector that analyzes semantic response patterns from a frozen vision-language model. [arXiv preprint](https://arxiv.org/abs/2610.10436).
+
+### GraphRectify
+
+A graph-based framework for transferring adversarial example detectors across neural network backbones. [arXiv preprint](https://arxiv.org/abs/2610.10423).
 
 ### JobPilot AI
 
@@ -33,7 +41,7 @@ A research paper RAG and LLMOps assistant supporting PDF upload, citation ground
 
 ### PromptShield
 
-An adversarial image detection system for frozen vision-language models using structured prompts and semantic consistency features. The related manuscript and source code are currently under review at NeurIPS 2026.
+An adversarial image detection prototype for frozen vision-language models using structured prompts and semantic consistency features.
 
 ### AttackBench
 
@@ -59,6 +67,18 @@ The project was published at the **2023 IEEE 31st International Conference on El
 
 The portfolio currently includes the following published and preprint research:
 
+- **Evaluating Security Claims in LLM Systems: A Survey of Adversarial Attacks and Defenses** — Preprints.org, 2026
+
+- **Detecting Adversarial Images through Response Profiles of Vision-Language Models** — arXiv, 2026
+
+- **GraphRectify: Graph-Based Transfer of Adversarial Example Detectors Across Neural Networks** — arXiv, 2026
+
+- **ChronosAttack: Adversarial Tool Scheduling Attacks on LLM Agents** — Research Square, 2026
+
+- **CohortHijack: Robustness of Single-Cell Annotation to Companion Cell Removal** — arXiv, 2026
+
+- **ConformalShift: Targeted Event Reordering Against Adaptive ECG Monitoring** — arXiv, 2026
+
 - **Defense Against Adversarial Attacks: Foundations, Strategies, and Future Directions**  
   Preprints.org, 2026
 
@@ -71,7 +91,7 @@ The portfolio currently includes the following published and preprint research:
 - **Atrial Fibrillation Detection Using Deep Learning with GAN-Based Data Augmentation**  
   IEEE ICEE, 2023
 
-The site also presents ongoing work in adversarial detection, vision-language model security, detector transfer, and randomized inference.
+The site also presents ongoing work on multimodal fusion attacks and adaptive adversarial example verification.
 
 ## Honors and Awards
 

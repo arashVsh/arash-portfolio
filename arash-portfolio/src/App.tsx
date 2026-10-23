@@ -73,7 +73,7 @@ type LinkButtonProps = {
 
 const profile = {
   name: "Arash Vashagh",
-  title: "Machine Learning Engineer | Software Developer | Cybersecurity Builder",
+  title: "Machine Learning Developer | Research Assistant at UNB | CTO at Ondiway",
   location: "Fredericton, NB, Canada",
   email: "arash.vashagh@gmail.com",
   linkedin: "https://www.linkedin.com/in/arash-vashagh-23084923a/",
@@ -82,7 +82,7 @@ const profile = {
   googleScholar: "https://scholar.google.com/citations?user=yOVk_hcAAAAJ&hl=en",
   orcid: "https://orcid.org/0009-0001-4006-6683",
   shortBio:
-    "I take a vague idea, research it, investigate the available resources, build a project, and then publish it.",
+    "I turn adversarial machine learning research into practical AI systems, from research questions and evaluation to deployed applications.",
 };
 
 const navItems = ["About", "Skills", "Projects", "Publications", "Experience", "Educator", "Contact"];
@@ -115,6 +115,8 @@ const skills: SkillGroup[] = [
       "Phishing Detection",
       "Trustworthy AI",
       "LLM Agent Security",
+      "Vision-Language Model Security",
+      "Security Evaluation",
     ],
   },
   {
@@ -133,6 +135,9 @@ const skills: SkillGroup[] = [
       "Flask",
       "REST APIs",
       "SQL/SQLite",
+      "Full-Stack Development",
+      "User Interface Design",
+      "Database Management",
     ],
   },
   {
@@ -154,6 +159,28 @@ const skills: SkillGroup[] = [
 ];
 
 const projects: Project[] = [
+  {
+    title: "Response Profiles for Vision-Language Models",
+    subtitle: "Adversarial Image Detection · arXiv 2026",
+    description:
+      "Detects adversarial images by examining how a frozen vision-language model responds to a collection of semantic prompts, without changing the underlying model.",
+    impact:
+      "Built a compact response-profile detector using category statistics, relationships between prompts, deviations from clean references, and stability under weak image transformations; evaluated it across multiple attacks and visual backbones.",
+    tech: ["Python", "Vision-Language Models", "Adversarial Detection", "Robustness Evaluation"],
+    paper: "https://arxiv.org/abs/2610.10436",
+    imageDescription: "Semantic prompt responses summarized into an adversarial image detection profile.",
+  },
+  {
+    title: "GraphRectify",
+    subtitle: "Transferable Adversarial Example Detection · arXiv 2026",
+    description:
+      "A graph-based framework for reusing an adversarial example detector when a protected neural network is replaced or upgraded.",
+    impact:
+      "Adapts intermediate features from a new classifier backbone to a learned graph detector, reducing the need to train a detector from scratch and evaluating transfer across architectures and attacks.",
+    tech: ["Python", "Graph-Based Learning", "Transfer Learning", "Adversarial Detection"],
+    paper: "https://arxiv.org/abs/2610.10423",
+    imageDescription: "A graph detector transferred from one neural network backbone to another.",
+  },
   {
     title: "ChronosAttack",
     subtitle: "Adversarial Tool Scheduling Attacks on LLM Agents",
@@ -303,7 +330,7 @@ const projects: Project[] = [
     title: "PromptShield",
     subtitle: "Adversarial Detection for Vision-Language Models",
     description:
-      "A practical ML security system that detects manipulated images before they can fool vision-language models. My paper along with my code are under review at NeurIPS 2026.",
+      "An adversarial image detection prototype for vision-language models using structured prompts and semantic consistency features.",
     impact: "Built the full pipeline: feature extraction, detector training, attack evaluation, ablations, and cross-model testing.",
     tech: ["Python", "PyTorch", "OpenCLIP", "NumPy", "Scikit-learn"],
     github: "https://github.com/arashVsh/VLM_SourceCode",
@@ -378,6 +405,27 @@ const projects: Project[] = [
 
 const publications: Publication[] = [
   {
+    title: "Evaluating Security Claims in LLM Systems: A Survey of Adversarial Attacks and Defenses",
+    venue: "Preprints.org preprint · October 2026",
+    description:
+      "Surveys attacks and defenses in LLM systems and proposes a framework for judging what security claims an evaluation actually supports across models, retrieval, agents, tools, privacy, and serving infrastructure.",
+    link: "https://www.preprints.org/manuscript/202610.1007",
+  },
+  {
+    title: "Detecting Adversarial Images through Response Profiles of Vision-Language Models",
+    venue: "arXiv preprint · October 2026",
+    description:
+      "Uses semantic response profiles to detect adversarial images across attacks while keeping the underlying vision-language model fixed.",
+    link: "https://arxiv.org/abs/2610.10436",
+  },
+  {
+    title: "GraphRectify: Graph-Based Transfer of Adversarial Example Detectors Across Neural Networks",
+    venue: "arXiv preprint · October 2026",
+    description:
+      "Transfers an adversarial example detector across neural network backbones by adapting intermediate representations to a reusable graph detector.",
+    link: "https://arxiv.org/abs/2610.10423",
+  },
+  {
     title: "ChronosAttack: Adversarial Tool Scheduling Attacks on LLM Agents",
     venue: "Research Square · August 2026",
     description:
@@ -414,15 +462,15 @@ const publications: Publication[] = [
   },
   {
     title: "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model",
-    venue: "Google Scholar record · November 2023",
-    description: "Research work completed during undergraduate research at Isfahan University of Technology.",
-    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u5HHmVD_uO8C",
+    venue: "IEEE ICCKE 2023 · November 2023",
+    description: "Uses Poincaré plot representations and diffusion-model data augmentation for atrial fibrillation detection from ECG signals.",
+    link: "https://ieeexplore.ieee.org/abstract/document/10326310",
   },
   {
     title: "Atrial Fibrillation (AF) Detection Using Deep Learning with GAN-based Data Augmentation",
-    venue: "Google Scholar record · May 2023",
-    description: "Research work completed during undergraduate research at Isfahan University of Technology.",
-    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=yOVk_hcAAAAJ&citation_for_view=yOVk_hcAAAAJ:u-x6o8ySG0sC",
+    venue: "IEEE ICEE 2023 · May 2023",
+    description: "Combines Poincaré recurrence plots, GAN-based data augmentation, and a CNN for atrial fibrillation classification from ECG signals.",
+    link: "https://ieeexplore.ieee.org/abstract/document/10334666",
   },
 
 ];
@@ -432,12 +480,11 @@ const publications: Publication[] = [
 const experiences: Experience[] = [
   {
     role: "Chief Technology Officer (CTO)",
-    org: "Gigi Drive · Contract Full-time",
+    org: "Ondiway",
     date: "Aug 2026 - Present",
-    location: "Fredericton, New Brunswick, Canada · Hybrid",
-    logo: "/logos/gigi-drive-logo.jpeg",
+    location: "Fredericton, New Brunswick, Canada",
     points: [
-      "Part of the founding team at Gigi Drive, leading the technical direction and early-stage product development.",
+      "Part of the founding team at Ondiway, leading technical direction and product development.",
       "Responsible for technology strategy, platform planning, and system design as we prepare for launch.",
     ],
   },
@@ -449,11 +496,11 @@ const experiences: Experience[] = [
       "Conducting MSc thesis research in adversarial machine learning, focusing on attacks, detection, robustness, and trustworthy AI.",
       "Developed ChronosAttack, a delay-only tool-scheduling attack showing that the order of authentic tool responses can change LLM-agent decisions across multiple model families.",
       "Co-authored a survey on adversarial attacks and another survey on defense mechanisms.",
-      "Proposed and implemented adversarial detection mechanisms currently under internal faculty review.",
+      "Developed adversarial image detection and detector-transfer methods described in two October 2026 arXiv preprints.",
       "Develop an adversarial attack on multimodal fusion models, with manuscript in progress.",
       "Co-authored CohortHijack, a study showing that an AI system can change how it labels a cell when some surrounding cells are removed, even though the cell itself is unchanged.",
       "Co-authored ConformalShift, a study showing that an ECG monitoring system can miss important abnormal heartbeats when genuine doctor feedback is received in a different order.",
-      "Coordinating graduate student work and manage TSAI Lab updates and educational content.",
+      "Coordinate graduate student work and manage TSAI Lab updates and educational content.",
     ],
 
     links: [
@@ -486,6 +533,10 @@ const experiences: Experience[] = [
         url: "https://arxiv.org/abs/2608.03628",
       },
       {
+        label: "LLM Security Survey",
+        url: "https://www.preprints.org/manuscript/202610.1007",
+      },
+      {
         label: "TSAI Lab LinkedIn",
         url: "https://www.linkedin.com/company/trustworthy-and-secure-ai-tsai-lab/?viewAsMember=true",
       },
@@ -495,20 +546,20 @@ const experiences: Experience[] = [
   {
     role: "Graduate Teaching Assistant",
     org: "University of New Brunswick",
-    date: "Jan 2025 - Apr 2026",
+    date: "Jan 2025 - Present",
     points: [
-      "Supported Software Engineering, Data Communication and Network Modeling, and Data Science for Big Data Analytics courses.",
+      "Supported Data Communication and Network Modeling (Fall 2025 and Fall 2026), Software Engineering (Winter 2026), and Data Science for Big Data Analytics.",
       "Helped students with Java, Python, programming concepts, debugging, and technical problem solving.",
-      "Courses: Software Engineering, Data Communication and Network Modeling, and Data Science for Big Data Analytics.",
+      "Assisted with instruction and grading.",
     ],
   },
   {
     role: "Conference Reviewer",
-    org: "ArtInHCI 2024 and BIBE 2024",
-    date: "Jul 2024 - Oct 2024",
+    org: "International conferences",
+    date: "Jul 2024 - Oct 2026",
     points: [
-      "Reviewed manuscripts and provided structured technical feedback for international conferences.",
-      "Evaluated research quality, clarity, methodology, and technical contribution.",
+      "Reviewed manuscripts for ArtInHCI 2024, BIBE 2024, SSCI 2027, and ICLR 2027.",
+      "Evaluated originality, technical depth, methodological soundness, and clarity.",
     ],
     links: [
       {
@@ -524,7 +575,7 @@ const experiences: Experience[] = [
   {
     role: "Research Assistant",
     org: "Isfahan University of Technology",
-    date: "Feb 2021 - Feb 2024",
+    date: "Jun 2022 - Jul 2023",
     points: [
       "Conducted machine learning and healthcare research resulting in two IEEE publications.",
       "Worked on model design, data preprocessing, experimental evaluation, paper writing, and conference presentation.",
@@ -545,8 +596,8 @@ const experiences: Experience[] = [
     org: "Isfahan University of Technology",
     date: "Feb 2021 - Feb 2024",
     points: [
-      "Supported Artificial Intelligence, Embedded Systems, Data Structures, and programming labs.",
-      "Gave tutorials and graded assignments in C++, Java, and Python courses.",
+      "Mentored over 400 students in AI, Embedded Systems, Data Structures, and C/C++/Python programming labs.",
+      "Led tutorials, graded coursework, and supported algorithmic problem solving.",
     ],
   },
   {
@@ -578,8 +629,9 @@ const certifications: string[] = [
   "CompTIA Data+",
   "CompTIA Project Management Essentials",
   "Google Cloud Digital Leader",
-  "CompTIA DataSys+ - Results Pending",
 ];
+
+const pendingCertification = "CompTIA DataSys+ beta exam completed; results pending";
 
 const honorsAwards = [
   {
@@ -681,7 +733,7 @@ export default function App() {
             </div>
 
             <div className="pl-4 text-cyan-600">
-              Remote in Canada & US · On-site in Fredericton
+              Open to relocation across Canada
             </div>
           </div>
 
@@ -742,8 +794,8 @@ export default function App() {
               {[
                 ["Focus", "Adversarial ML"],
                 ["Degree", "MSc CS"],
-                ["Teaching", "500+ students"],
-                ["Certifications", "12+"],
+                ["Teaching", "400+ students"],
+                ["Publications", "10 papers"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <p className="text-xs uppercase tracking-widest text-slate-400">{label}</p>
@@ -763,13 +815,13 @@ export default function App() {
       <section id="about" className="mx-auto max-w-7xl px-5 py-16">
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { icon: GraduationCap, title: "Graduate Researcher", text: "MSc candidate at UNB researching adversarial machine learning and robust AI systems." },
+            { icon: GraduationCap, title: "Graduate Researcher", text: "UNB research assistant and team lead focused on adversarial machine learning and trustworthy AI." },
             {
               icon: Users,
               title: "Educator & Team Lead",
               text: "Teaching assistant, lab team lead, and creator of a Persian AI Security course for learners facing language barriers.",
             },
-            { icon: BriefcaseBusiness, title: "Industry-Oriented Builder", text: "Focused on practical ML, software engineering, APIs, mobile apps, cloud tools, and security systems." },
+            { icon: BriefcaseBusiness, title: "CTO & Product Builder", text: "Founding team member at Ondiway, leading technical strategy, platform planning, and system design." },
           ].map((card) => {
             const Icon = card.icon;
             return (
@@ -869,9 +921,7 @@ export default function App() {
             ))}
           </div>
 
-          <h3 className="mt-12 mb-5 text-2xl font-bold text-slate-950"></h3>
-
-          <h3 className="mb-5 text-2xl font-bold text-slate-950">
+          <h3 className="mt-12 mb-5 text-2xl font-bold text-slate-950">
             Ongoing Research & Engineering Work
           </h3>
 
@@ -881,16 +931,6 @@ export default function App() {
                 title:
                   "FusionBreak: Selectively Attacking Multimodal Fusion While Preserving Unimodal Decisions",
                 status: "Under internal faculty review",
-              },
-              {
-                title:
-                  "GraphRectify: Transferring Adversarial Example Detectors Across Neural Networks",
-                status: "Under internal faculty review",
-              },
-              {
-                title:
-                  "Structured Prompt Consistency for Adversarial Image Detection with Frozen Vision-Language Models",
-                status: "Under review at NeurIPS 2026",
               },
               {
                 title:
@@ -985,6 +1025,7 @@ export default function App() {
                 <span key={cert} className="rounded-full bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">{cert}</span>
               ))}
             </div>
+            <p className="mt-4 text-sm text-slate-500">{pendingCertification}</p>
 
             <div className="mt-8">
               <div className="mb-5 flex items-center gap-3">
@@ -1041,7 +1082,7 @@ export default function App() {
                         Trustworthy and Secure AI (TSAI) Lab
                       </p>
                       <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
-                        Oct 2025 - Aug 2026
+                        Oct 2025 - Present
                       </span>
                     </div>
 
@@ -1185,7 +1226,7 @@ export default function App() {
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Contact</p>
               <h2 className="text-3xl font-black md:text-4xl">Looking for someone who learns fast, builds seriously, and cares about the work?</h2>
               <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-                I am looking for machine learning engineering, software development, cybersecurity, and applied AI roles. I am open to remote opportunities across Canada and the US, as well as on-site roles in Fredericton, and bring a mix of research and hands-on experience.
+                I am available for full-time machine learning engineering, software development, cybersecurity, and applied AI roles, and open to relocation across Canada. I bring research experience and hands-on product development.
               </p>
               <p className="mt-4 text-slate-300">
                 Email: {profile.email}
